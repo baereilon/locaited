@@ -1,0 +1,15 @@
+{
+  "url": "https://engage.metmuseum.org/members/membership/",
+  "timestamp": "2025-08-19T10:18:17.749183",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://engage.metmuseum.org/members/membership/",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 0.17,
+    "request_id": "bf58c27f-33fb-48f1-b4d5-71b7e306d2ea"
+  }
+}

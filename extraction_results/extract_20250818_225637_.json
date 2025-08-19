@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_225637",
+  "url": "https://www.instagram.com/natddp/",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/natddp/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.07,
+    "request_id": "1202e9e7-f87b-4a37-b278-83cbe152eac1"
+  },
+  "cost": 0.01
+}

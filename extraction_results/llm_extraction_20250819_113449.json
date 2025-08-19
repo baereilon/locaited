@@ -1,0 +1,136 @@
+{
+  "timestamp": "20250819_113449",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-19\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.eventbrite.com/e/official-womxns-day-protest-with-womens-march-rise-and-resist-tickets-1260265982479\",\n    \"title\": \"Official Womxn's Day Protest with Women's March & Rise and Resist\",\n    \"snippet\": \"Ev...",
+  "raw_response": "[\n    {\n        \"id\": 1,\n        \"title\": \"Official Womxn's Day Protest with Women's March & Rise and Resist\",\n        \"date\": \"2025-03-08\",\n        \"time\": null,\n        \"location\": \"Washington Square Park, New York, NY\",\n        \"organizer\": \"Women's March & Rise and Resist\",\n        \"access_req\": \"open to all\",\n        \"summary\": \"Official Womxn's Day protest organized by Women's March & Rise and Resist at Washington Square Park.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/official-womxns-day-protest-with-womens-march-rise-and-resist-tickets-1260265982479\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Extinction Rebellion NYC Events and Tickets\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"Extinction Rebellion NYC\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Events organized by Extinction Rebellion NYC including Climate Crisis Protest and Campaign Launch.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/o/extinction-rebellion-nyc-30639374730\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Protests in canandaigua ny march 2025 events in Victor, NY\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": \"Various events in Victor, NY including business, science & tech, music, film & media, and more.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/d/ny--victor/protests-in-canandaigua-ny-march-2025/\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"CENSOR THIS! A Design Protest for the Loud, the Banned and the Unafraid.\",\n        \"date\": \"2025-05-20\",\n        \"time\": null,\n        \"location\": \"Thought Matter, New York\",\n        \"organizer\": \"Thought Matter\",\n        \"access_req\": \"open to all\",\n        \"summary\": \"Design protest event at Thought Matter for the loud, the banned, and the unafraid.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/censor-this-a-design-protest-for-the-loud-the-banned-and-the-unafraid-tickets-1317625556509\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"2024 NYC Pride March\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"NYC Pride\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"NYC Pride's theme for 2025 - 'Rise Up: Pride in Protest' honoring the legacy of the first Pride March in 1970.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://on.nyc.gov/3xVCngk\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Rally For a Food Secure NYC!\",\n        \"date\": \"2025-04-03\",\n        \"time\": null,\n        \"location\": \"Steps of City Hall, New York, NY\",\n        \"organizer\": \"Food Bank For New York City\",\n        \"access_req\": \"open to all\",\n        \"summary\": \"Rally organized by Food Bank For New York City for a food secure NYC at Steps of City Hall.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/rally-for-a-food-secure-nyc-tickets-1299974531819\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Protests in new york events in New City, NY\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": \"Various events in New City, NY including business, science & tech, music, film & media, and more.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/d/ny--new-city/protests-in-new-york/\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Stand Up for Science 2025 - NYC\",\n        \"date\": \"2025-03-07\",\n        \"time\": null,\n        \"location\": \"Washington Square Park, New York, NY\",\n        \"organizer\": \"Stand up for Science\",\n        \"access_req\": \"open to all\",\n        \"summary\": \"Stand Up for Science event organized by Stand up for Science at Washington Square Park.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/stand-up-for-science-2025-nyc-tickets-1260230285709\"\n    }\n]",
+  "parsed_events": [
+    {
+      "id": 1,
+      "title": "Official Womxn's Day Protest with Women's March & Rise and Resist",
+      "date": "2025-03-08",
+      "time": null,
+      "location": "Washington Square Park, New York, NY",
+      "organizer": "Women's March & Rise and Resist",
+      "access_req": "open to all",
+      "summary": "Official Womxn's Day protest organized by Women's March & Rise and Resist at Washington Square Park.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/official-womxns-day-protest-with-womens-march-rise-and-resist-tickets-1260265982479"
+    },
+    {
+      "id": 2,
+      "title": "Extinction Rebellion NYC Events and Tickets",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": "Extinction Rebellion NYC",
+      "access_req": "unknown",
+      "summary": "Events organized by Extinction Rebellion NYC including Climate Crisis Protest and Campaign Launch.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/o/extinction-rebellion-nyc-30639374730"
+    },
+    {
+      "id": 3,
+      "title": "Protests in canandaigua ny march 2025 events in Victor, NY",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": "Various events in Victor, NY including business, science & tech, music, film & media, and more.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/d/ny--victor/protests-in-canandaigua-ny-march-2025/"
+    },
+    {
+      "id": 4,
+      "title": "CENSOR THIS! A Design Protest for the Loud, the Banned and the Unafraid.",
+      "date": "2025-05-20",
+      "time": null,
+      "location": "Thought Matter, New York",
+      "organizer": "Thought Matter",
+      "access_req": "open to all",
+      "summary": "Design protest event at Thought Matter for the loud, the banned, and the unafraid.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/censor-this-a-design-protest-for-the-loud-the-banned-and-the-unafraid-tickets-1317625556509"
+    },
+    {
+      "id": 5,
+      "title": "2024 NYC Pride March",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": "NYC Pride",
+      "access_req": "unknown",
+      "summary": "NYC Pride's theme for 2025 - 'Rise Up: Pride in Protest' honoring the legacy of the first Pride March in 1970.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://on.nyc.gov/3xVCngk"
+    },
+    {
+      "id": 6,
+      "title": "Rally For a Food Secure NYC!",
+      "date": "2025-04-03",
+      "time": null,
+      "location": "Steps of City Hall, New York, NY",
+      "organizer": "Food Bank For New York City",
+      "access_req": "open to all",
+      "summary": "Rally organized by Food Bank For New York City for a food secure NYC at Steps of City Hall.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/rally-for-a-food-secure-nyc-tickets-1299974531819"
+    },
+    {
+      "id": 7,
+      "title": "Protests in new york events in New City, NY",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": "Various events in New City, NY including business, science & tech, music, film & media, and more.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/d/ny--new-city/protests-in-new-york/"
+    },
+    {
+      "id": 8,
+      "title": "Stand Up for Science 2025 - NYC",
+      "date": "2025-03-07",
+      "time": null,
+      "location": "Washington Square Park, New York, NY",
+      "organizer": "Stand up for Science",
+      "access_req": "open to all",
+      "summary": "Stand Up for Science event organized by Stand up for Science at Washington Square Park.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/stand-up-for-science-2025-nyc-tickets-1260230285709"
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 1234,
+    "prompt_tokens": 9232,
+    "total_tokens": 10466,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.0021252
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_230155",
+  "url": "https://twitter.com/PeoplesForumNYC",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://twitter.com/PeoplesForumNYC",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.09,
+    "request_id": "30ff6fd7-275f-48d4-bd8e-517a9427e6ac"
+  },
+  "cost": 0.01
+}

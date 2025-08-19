@@ -39,7 +39,8 @@ class PublisherAgent:
         credentials = user_profile.get("credentials", [])
         
         for event in events:
-            access = event.get("access_req", "unknown").lower()
+            access_req = event.get("access_req", "unknown")
+            access = access_req.lower() if access_req else "unknown"
             
             # Skip events that require credentials user doesn't have
             if "press" in access and "press_card" not in credentials:
@@ -241,8 +242,12 @@ JSON array only, no other text:"""
         Returns:
             Events with scores and rationales added
         """
+        # Handle case where llm_scores is None or empty
+        if not llm_scores:
+            llm_scores = []
+        
         # Create score lookup
-        score_map = {score["id"]: score for score in llm_scores}
+        score_map = {score["id"]: score for score in llm_scores if isinstance(score, dict) and "id" in score}
         
         recommendations = []
         for i, event in enumerate(events, 1):

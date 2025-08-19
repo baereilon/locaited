@@ -1,0 +1,15 @@
+{
+  "url": "https://www.instagram.com/p/DJefxBJtsPU/",
+  "timestamp": "2025-08-18T23:01:54.777247",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/p/DJefxBJtsPU/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.08,
+    "request_id": "c16c1bfa-f53e-498d-aadb-5727c9ecfcef"
+  }
+}

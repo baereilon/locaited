@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250819_101817",
+  "url": "https://engage.metmuseum.org/members/membership/",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://engage.metmuseum.org/members/membership/",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 0.17,
+    "request_id": "bf58c27f-33fb-48f1-b4d5-71b7e306d2ea"
+  },
+  "cost": 0.01
+}

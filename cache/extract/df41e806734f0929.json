@@ -1,0 +1,15 @@
+{
+  "url": "https://on.nyc.gov/2KCgHAJ",
+  "timestamp": "2025-08-18T22:56:41.253549",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://on.nyc.gov/2KCgHAJ",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.05,
+    "request_id": "cd54279a-168f-4205-a6c2-82a6d30762cb"
+  }
+}

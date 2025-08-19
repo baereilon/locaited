@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250818_225646",
+  "url": "https://a836-pts-access.nyc.gov/care/forms/htmlframe.aspx?mode=content/home.htm",
+  "response": {
+    "results": [
+      {
+        "url": "https://a836-pts-access.nyc.gov/care/forms/htmlframe.aspx?mode=content/home.htm",
+        "raw_content": "NYC Finance\n\n===============\n\nThe System is currently unavailable due to maintenance. Please check again later.![Image 1: Hide Bar](https://a836-pts-access.nyc.gov/care/images/icons/Set1/closeicon-normal.gif)\n\n[](http://www1.nyc.gov/site/finance/index.page \"Click here to visit home page\")\n\n[![Image 2: Help](https://a836-pts-access.nyc.gov/care/images/common/icons/050.png)](javascript:showHelp(''))\n\n*   [.](https://a836-pts-access.nyc.gov/care/forms/externallink.aspx?mode=http://www1.nyc.gov/site/finance/index.page)\n*   [Property Information](https://a836-pts-access.nyc.gov/care/search/commonsearch.aspx?mode=address)\n*   [Apply for Exemptions](https://a836-pts-access.nyc.gov/care/forms/externallink.aspx?mode=https://www.nyc.gov/site/finance/property/property-tax-benefits.page)\n*   [Get Help](https://a836-pts-access.nyc.gov/care/forms/externallink.aspx?mode=http://www1.nyc.gov/site/finance/about/contact-us.page)\n\n[](https://a836-pts-access.nyc.gov/care/forms/htmlframe.aspx?mode=content/home.htm)\n\nWelcome to the NYC Department of Finance's Property Tax Public Access web portal, your resource for information about New York City property taxes. In Public Access, you can:\n\n*    Look up information about a property, including its tax class and market value.\n*    View your property tax bills, annual notices of property value (NOPV), and other important statements.\n*    Apply for tax exemptions and see which exemptions you already receive.\n\nSimply begin by searching for a property by address or borough-block-lot (BBL) number.\n\n If you have any questions, [contact us](http://www1.nyc.gov/site/finance/about/contact-us.page).\n\n[Property Address Search](https://a836-pts-access.nyc.gov/care/search/commonsearch.aspx?mode=address)[BBL Search](https://a836-pts-access.nyc.gov/care/search/commonsearch.aspx?mode=persprop)[REUC Search](https://a836-pts-access.nyc.gov/care/search/commonsearch.aspx?mode=realprop)\n\n[**Directory of City Agencies**](https://www1.nyc.gov/nyc-resources/agencies.page)**[Notify NYC](https://a858-nycnotify.nyc.gov/notifynyc/)**\n\n**[NYC Mobile Apps](https://www1.nyc.gov/connect/mobile-applications.page)****[Contact NYC Government](https://www1.nyc.gov/home/contact-us.page)\n\n[CityStore](https://a856-citystore.nyc.gov/)****[Maps](https://www1.nyc.gov/nyc-resources/nyc-maps.page)****[City Employees](https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&)\n\n[Stay Connected](https://www1.nyc.gov/connect/social-media.page)\n\n[Resident Toolkit](https://www1.nyc.gov/nyc-resources/resident-toolkit.page)**![Image 3: NYC Logo](https://www1.nyc.gov/assets/home/images/global/nyc_white.png)\n\nCity of New York. 2022\n\nAll Rights Reserved,\n\n NYC is a trademark and service mark of the City of New York\n\n[Privacy Policy.](https://www1.nyc.gov/home/privacy-policy.page)[Terms of Use.](https://www1.nyc.gov/home/terms-of-use.page)[![Image 4](https://www1.nyc.gov/assets/home/images/global/accessibility_icon.svg)](https://www1.nyc.gov/site/mopd/index.page)Search\n",
+        "images": []
+      }
+    ],
+    "failed_results": [],
+    "response_time": 0.01,
+    "request_id": "4273b443-b827-4a95-83df-5387c6cfbcab"
+  },
+  "cost": 0.01
+}

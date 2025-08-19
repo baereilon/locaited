@@ -1,0 +1,15 @@
+{
+  "url": "https://www.instagram.com/nycpym/",
+  "timestamp": "2025-08-19T10:15:09.168751",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/nycpym/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.1,
+    "request_id": "1e5c36c1-6312-4531-b5cc-537c8755c903"
+  }
+}

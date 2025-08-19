@@ -1,0 +1,65 @@
+{
+  "timestamp": "20250819_101756",
+  "total_events": 4,
+  "events_with_basic_info": 0,
+  "past_events": 4,
+  "basic_info_percentage": 0.0,
+  "events": [
+    {
+      "id": 1,
+      "title": "State of the People Town Hall",
+      "date": "2025-06-17",
+      "time": null,
+      "location": "Harlem School of the Arts, New York, NY",
+      "organizer": "The Office of the Public Advocate",
+      "access_req": "unknown",
+      "summary": "Town hall event organized by The Office of the Public Advocate.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/state-of-the-people-town-hall-tickets-1397158993159"
+    },
+    {
+      "id": 2,
+      "title": "State of NYC Nightlife Town Hall 2025",
+      "date": "2025-05-28",
+      "time": null,
+      "location": "Annex417, New York, NY",
+      "organizer": "NYC Office of Nightlife",
+      "access_req": "unknown",
+      "summary": "Town hall event focusing on the state of nightlife in NYC.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/state-of-nyc-nightlife-town-hall-2025-tickets-1343994536839"
+    },
+    {
+      "id": 3,
+      "title": "Spring Educator Mix & Mingle | The Town Hall",
+      "date": "2025-05-27",
+      "time": null,
+      "location": "The Town Hall, New York, NY",
+      "organizer": "The Town Hall",
+      "access_req": "unknown",
+      "summary": "Event for educators to mix and mingle at The Town Hall.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/spring-educator-mix-mingle-the-town-hall-tickets-1342828459069"
+    },
+    {
+      "id": 4,
+      "title": "Town Hall",
+      "date": "2025-05-14",
+      "time": null,
+      "location": "47 Thames Street, Brooklyn, NY, USA, Brooklyn, NY",
+      "organizer": "ThirdSpace",
+      "access_req": "unknown",
+      "summary": "Town hall event organized by ThirdSpace in Brooklyn.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/town-hall-tickets-1350550987359"
+    }
+  ]
+}

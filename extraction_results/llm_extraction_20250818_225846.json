@@ -1,0 +1,66 @@
+{
+  "timestamp": "20250818_225846",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-18\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.instagram.com/p/DG6LlrAyclW/\",\n    \"title\": \"The biggest night in fashion is almost here. The 2025 #MetGala is ...\",\n    \"snippet\": \"The 2025 #MetGala is coming up on the first Monday in May, celebrating...",
+  "raw_response": "```json\n[\n    {\n        \"id\": 1,\n        \"title\": \"Met Gala 2025\",\n        \"date\": \"2025-05-05\",\n        \"time\": \"Evening\",\n        \"location\": \"New York's Metropolitan Museum of Art\",\n        \"organizer\": \"Metropolitan Museum of Art\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Annual Met Gala celebrating Black history, culture, and style with a theme of 'Tailored for You'.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.cnn.com/2025/05/05/style/met-gala-2025-red-carpet-fashion\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"MET GALA VIEWING PARTY 2025\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"FGIDC\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"A viewing party for the Met Gala 2025 hosted by FGIDC for fashion professionals in the region.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.instagram.com/p/DINQJrFRQGL/\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Chrysler Museum & Glass Studio\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": \"Highly anticipated exhibition opening with the prestigious Met Gala event.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.instagram.com/p/DJRkIqSqcN1/\"\n    }\n]\n```  ",
+  "parsed_events": [
+    {
+      "id": 1,
+      "title": "Met Gala 2025",
+      "date": "2025-05-05",
+      "time": "Evening",
+      "location": "New York's Metropolitan Museum of Art",
+      "organizer": "Metropolitan Museum of Art",
+      "access_req": "unknown",
+      "summary": "Annual Met Gala celebrating Black history, culture, and style with a theme of 'Tailored for You'.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.cnn.com/2025/05/05/style/met-gala-2025-red-carpet-fashion"
+    },
+    {
+      "id": 2,
+      "title": "MET GALA VIEWING PARTY 2025",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": "FGIDC",
+      "access_req": "unknown",
+      "summary": "A viewing party for the Met Gala 2025 hosted by FGIDC for fashion professionals in the region.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/p/DINQJrFRQGL/"
+    },
+    {
+      "id": 3,
+      "title": "Chrysler Museum & Glass Studio",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": "Highly anticipated exhibition opening with the prestigious Met Gala event.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/p/DJRkIqSqcN1/"
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 417,
+    "prompt_tokens": 2352,
+    "total_tokens": 2769,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.000603
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_225705",
+  "url": "https://twitter.com/protest_nyc",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://twitter.com/protest_nyc",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.08,
+    "request_id": "0fc687fe-ef69-4c85-8869-ec8a652024e8"
+  },
+  "cost": 0.01
+}

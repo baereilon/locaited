@@ -116,8 +116,8 @@ class BenchmarkSystem:
             print(f"  Running LangGraph workflow...")
             app = create_workflow()
             
-            # Set recursion limit to prevent infinite loops
-            config = {"recursion_limit": 3}
+            # Set recursion limit higher for v0.3.0 (might need cycles)
+            config = {"recursion_limit": 10}
             final_state = app.invoke(initial_state, config=config)
             
             # Extract results from final state

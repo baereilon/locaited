@@ -1,0 +1,15 @@
+{
+  "url": "https://www.instagram.com/svitanok.nyc/",
+  "timestamp": "2025-08-19T10:15:08.111371",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/svitanok.nyc/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.13,
+    "request_id": "e3583c9b-753f-4f47-9f93-b5690e5a10dc"
+  }
+}

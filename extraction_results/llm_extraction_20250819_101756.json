@@ -1,0 +1,80 @@
+{
+  "timestamp": "20250819_101756",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-19\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.eventbrite.com/e/state-of-the-people-town-hall-tickets-1397158993159\",\n    \"title\": \"State of the People Town Hall - Eventbrite\",\n    \"snippet\": \"Eventbrite - The Office of the Public Advocate presents S...",
+  "raw_response": "```json\n[\n    {\n        \"id\": 1,\n        \"title\": \"State of the People Town Hall\",\n        \"date\": \"2025-06-17\",\n        \"time\": null,\n        \"location\": \"Harlem School of the Arts, New York, NY\",\n        \"organizer\": \"The Office of the Public Advocate\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Town hall event organized by The Office of the Public Advocate.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/state-of-the-people-town-hall-tickets-1397158993159\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"State of NYC Nightlife Town Hall 2025\",\n        \"date\": \"2025-05-28\",\n        \"time\": null,\n        \"location\": \"Annex417, New York, NY\",\n        \"organizer\": \"NYC Office of Nightlife\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Town hall event focusing on the state of nightlife in NYC.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/state-of-nyc-nightlife-town-hall-2025-tickets-1343994536839\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Spring Educator Mix & Mingle | The Town Hall\",\n        \"date\": \"2025-05-27\",\n        \"time\": null,\n        \"location\": \"The Town Hall, New York, NY\",\n        \"organizer\": \"The Town Hall\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Event for educators to mix and mingle at The Town Hall.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/spring-educator-mix-mingle-the-town-hall-tickets-1342828459069\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Town Hall\",\n        \"date\": \"2025-05-14\",\n        \"time\": null,\n        \"location\": \"47 Thames Street, Brooklyn, NY, USA, Brooklyn, NY\",\n        \"organizer\": \"ThirdSpace\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Town hall event organized by ThirdSpace in Brooklyn.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.eventbrite.com/e/town-hall-tickets-1350550987359\"\n    }\n]\n```",
+  "parsed_events": [
+    {
+      "id": 1,
+      "title": "State of the People Town Hall",
+      "date": "2025-06-17",
+      "time": null,
+      "location": "Harlem School of the Arts, New York, NY",
+      "organizer": "The Office of the Public Advocate",
+      "access_req": "unknown",
+      "summary": "Town hall event organized by The Office of the Public Advocate.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/state-of-the-people-town-hall-tickets-1397158993159"
+    },
+    {
+      "id": 2,
+      "title": "State of NYC Nightlife Town Hall 2025",
+      "date": "2025-05-28",
+      "time": null,
+      "location": "Annex417, New York, NY",
+      "organizer": "NYC Office of Nightlife",
+      "access_req": "unknown",
+      "summary": "Town hall event focusing on the state of nightlife in NYC.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/state-of-nyc-nightlife-town-hall-2025-tickets-1343994536839"
+    },
+    {
+      "id": 3,
+      "title": "Spring Educator Mix & Mingle | The Town Hall",
+      "date": "2025-05-27",
+      "time": null,
+      "location": "The Town Hall, New York, NY",
+      "organizer": "The Town Hall",
+      "access_req": "unknown",
+      "summary": "Event for educators to mix and mingle at The Town Hall.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/spring-educator-mix-mingle-the-town-hall-tickets-1342828459069"
+    },
+    {
+      "id": 4,
+      "title": "Town Hall",
+      "date": "2025-05-14",
+      "time": null,
+      "location": "47 Thames Street, Brooklyn, NY, USA, Brooklyn, NY",
+      "organizer": "ThirdSpace",
+      "access_req": "unknown",
+      "summary": "Town hall event organized by ThirdSpace in Brooklyn.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/town-hall-tickets-1350550987359"
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 607,
+    "prompt_tokens": 7155,
+    "total_tokens": 7762,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.00143745
+}

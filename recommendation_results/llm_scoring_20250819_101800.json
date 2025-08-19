@@ -1,0 +1,49 @@
+{
+  "timestamp": "20250819_101800",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are an expert event publisher for photojournalists in NYC.\n\nYOUR PRIMARY JOB: Evaluate if this batch of events is good enough for the user, or if we need another search cycle.\n\nUSER PROFILE:\n- Interests: \n- Keywords: meeting, cultural, opening, press, parade, mayor, celebration, conference, festival, summit\n- Credentials: press_card\n- Location: NYC\n\nGATE DECISION CRITERIA (MOST IMPORTANT):\n- Are these REAL, SPECIFIC events (not profile pages or calendars)?\n- Do they have actionable informati...",
+  "full_prompt_length": 4033,
+  "raw_response": "[\n  {\n    \"id\": 1,\n    \"score\": 0.0,\n    \"photo_title\": \"N/A\",\n    \"rationale\": \"No actionable information provided for planning coverage.\"\n  },\n  {\n    \"id\": 2,\n    \"score\": 0.0,\n    \"photo_title\": \"N/A\",\n    \"rationale\": \"No actionable information provided for planning coverage.\"\n  },\n  {\n    \"id\": 3,\n    \"score\": 0.0,\n    \"photo_title\": \"N/A\",\n    \"rationale\": \"No actionable information provided for planning coverage.\"\n  },\n  {\n    \"id\": 4,\n    \"score\": 0.0,\n    \"photo_title\": \"N/A\",\n    \"rationale\": \"No actionable information provided for planning coverage.\"\n  }\n]",
+  "parsed_scores": [
+    {
+      "id": 1,
+      "score": 0.0,
+      "photo_title": "N/A",
+      "rationale": "No actionable information provided for planning coverage."
+    },
+    {
+      "id": 2,
+      "score": 0.0,
+      "photo_title": "N/A",
+      "rationale": "No actionable information provided for planning coverage."
+    },
+    {
+      "id": 3,
+      "score": 0.0,
+      "photo_title": "N/A",
+      "rationale": "No actionable information provided for planning coverage."
+    },
+    {
+      "id": 4,
+      "score": 0.0,
+      "photo_title": "N/A",
+      "rationale": "No actionable information provided for planning coverage."
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 174,
+    "prompt_tokens": 1114,
+    "total_tokens": 1288,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.0002715
+}

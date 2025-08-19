@@ -1,0 +1,37 @@
+{
+  "timestamp": "20250819_101439",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are an expert event publisher for photojournalists in NYC.\n\nYOUR PRIMARY JOB: Evaluate if this batch of events is good enough for the user, or if we need another search cycle.\n\nUSER PROFILE:\n- Interests: \n- Keywords: meeting, cultural, opening, press, parade, mayor, celebration, conference, festival, summit\n- Credentials: press_card\n- Location: NYC\n\nGATE DECISION CRITERIA (MOST IMPORTANT):\n- Are these REAL, SPECIFIC events (not profile pages or calendars)?\n- Do they have actionable informati...",
+  "full_prompt_length": 5781,
+  "raw_response": "[\n    {\n        \"id\": 1,\n        \"score\": 0.7,\n        \"photo_title\": \"CULTURAL: Parades and Festivals in Manhattan - May 17, 7:00AM at Various Locations\",\n        \"rationale\": \"High visual interest with vibrant displays and diverse cultural representation. Multiple locations provide varied photo opportunities. Potential competition due to multiple events happening simultaneously.\"\n    },\n    {\n        \"id\": 9,\n        \"score\": 0.6,\n        \"photo_title\": \"CULTURAL: ISRAELI DAY PARADE 2025 - May 18 at TBA\",\n        \"rationale\": \"Cultural celebration with colorful displays and enthusiastic participants. Limited information may pose challenges for planning coverage. Early morning lighting conditions can enhance photos.\"\n    }\n]",
+  "parsed_scores": [
+    {
+      "id": 1,
+      "score": 0.7,
+      "photo_title": "CULTURAL: Parades and Festivals in Manhattan - May 17, 7:00AM at Various Locations",
+      "rationale": "High visual interest with vibrant displays and diverse cultural representation. Multiple locations provide varied photo opportunities. Potential competition due to multiple events happening simultaneously."
+    },
+    {
+      "id": 9,
+      "score": 0.6,
+      "photo_title": "CULTURAL: ISRAELI DAY PARADE 2025 - May 18 at TBA",
+      "rationale": "Cultural celebration with colorful displays and enthusiastic participants. Limited information may pose challenges for planning coverage. Early morning lighting conditions can enhance photos."
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 167,
+    "prompt_tokens": 1609,
+    "total_tokens": 1776,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.00034155000000000003
+}

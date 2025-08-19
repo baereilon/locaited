@@ -1,0 +1,15 @@
+{
+  "url": "https://a810-dobnow.nyc.gov/publish/Index.html",
+  "timestamp": "2025-08-18T22:56:46.760274",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://a810-dobnow.nyc.gov/publish/Index.html",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 0.25,
+    "request_id": "eb06add1-834f-4495-a00e-9a4733e51315"
+  }
+}

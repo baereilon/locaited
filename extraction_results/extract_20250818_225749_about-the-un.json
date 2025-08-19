@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250818_225749",
+  "url": "https://main.un.org/securitycouncil/en/content/about-the-un",
+  "response": {
+    "results": [
+      {
+        "url": "https://main.un.org/securitycouncil/en/content/about-the-un",
+        "raw_content": "[Skip to main content / navigation](#main-content)\n\n1. [Home](/securitycouncil/en)\n\nThe United Nations is an international organization founded in 1945.\u00a0 It is currently made up of 193 Member States.\u00a0 The mission and work of the United Nations are guided by the purposes and principles contained in its\u00a0founding Charter.\n\nDue to the powers vested in its Charter and its unique international character, the United Nations can take action on the issues confronting humanity in the 21st century, such as [peace](#test) and security, climate change, sustainable development, human rights, disarmament, terrorism, humanitarian and health emergencies, gender equality, governance, food production, and more.\n\nThe UN also provides a forum for its members to express their views in the General Assembly, the Security Council, the Economic and Social Council, and other bodies and committees. By enabling dialogue between its members, and by hosting negotiations, the Organization has become a mechanism for governments to find areas of agreement and solve problems together.\n\nThe UN's Chief Administrative Officer is the Secretary-General.\n\n2015 marked the 70th anniversary of the United Nations.",
+        "images": []
+      }
+    ],
+    "failed_results": [],
+    "response_time": 0.0,
+    "request_id": "11c02871-4bc4-4aeb-8d22-e01a977f986f"
+  },
+  "cost": 0.01
+}

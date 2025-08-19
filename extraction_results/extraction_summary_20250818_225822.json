@@ -1,0 +1,93 @@
+{
+  "timestamp": "20250818_225822",
+  "total_events": 6,
+  "events_with_basic_info": 1,
+  "past_events": 5,
+  "basic_info_percentage": 16.666666666666664,
+  "events": [
+    {
+      "id": 1,
+      "title": "Town Hall",
+      "date": "2025-05-14",
+      "time": "Unknown",
+      "location": "47 Thames Street, Brooklyn, NY, USA, Brooklyn, NY",
+      "organizer": "ThirdSpace",
+      "access_req": "unknown",
+      "summary": "Town Hall event organized by ThirdSpace.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/town-hall-tickets-1350550987359"
+    },
+    {
+      "id": 2,
+      "title": "Mayor Adams Announces Upcoming Cultural Events as Part of",
+      "date": "2025-06-10",
+      "time": "Unknown",
+      "location": "City of New York",
+      "organizer": "Adams administration",
+      "access_req": "unknown",
+      "summary": "Upcoming cultural events announced by Mayor Adams.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.nyc.gov/office-of-the-mayor/news/404-25/mayor-adams-upcoming-cultural-events-part-founded-nyc-campaign-commemorate"
+    },
+    {
+      "id": 3,
+      "title": "Subcommittee on Zoning and Franchises",
+      "date": "2025-08-20",
+      "time": "11:00",
+      "location": "250 Broadway - Committee Room, 16th Floor, NYC",
+      "organizer": "New York City Council",
+      "access_req": "unknown",
+      "summary": "Subcommittee meeting on Zoning and Franchises.",
+      "has_basic_info": true,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://legistar.council.nyc.gov/Calendar.aspx?Mode=This%20Month"
+    },
+    {
+      "id": 4,
+      "title": "Homeowner Protection and Resilience Town Hall",
+      "date": "2025-06-28",
+      "time": "Unknown",
+      "location": "Robert Ross Johnson Family",
+      "organizer": "Council Member Nantasha Williams",
+      "access_req": "unknown",
+      "summary": "Town Hall event focusing on homeowner protection and resilience.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/homeowner-protection-and-resilience-town-hall-tickets-1355748834259"
+    },
+    {
+      "id": 5,
+      "title": "Town Hall",
+      "date": "2025-03-12",
+      "time": "Unknown",
+      "location": "47 Thames Street, Brooklyn, NY, USA, Brooklyn, NY",
+      "organizer": "ThirdSpace",
+      "access_req": "unknown",
+      "summary": "Town Hall event organized by ThirdSpace.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/town-hall-tickets-1271210557999"
+    },
+    {
+      "id": 6,
+      "title": "COMEDY MOB TOWN HALL AT RODNEY'S",
+      "date": "2025-05-18",
+      "time": "Unknown",
+      "location": "Rodney's Comedy Club",
+      "organizer": "Comedy Mob",
+      "access_req": "unknown",
+      "summary": "Comedy event at Rodney's Comedy Club.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.eventbrite.com/e/comedy-mob-town-hall-at-rodneys-tickets-1362259066539"
+    }
+  ]
+}

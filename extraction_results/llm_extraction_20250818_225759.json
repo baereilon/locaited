@@ -1,0 +1,66 @@
+{
+  "timestamp": "20250818_225759",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-18\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.eventbrite.com/e/new-approaches-summit-nyc-2025-4th-annual-date-tickets-1029039413587\",\n    \"title\": \"New Approaches Summit: NYC 2025 - 4th Annual Date - Eventbrite\",\n    \"snippet\": \"The one-day event is...",
+  "raw_response": "[\n    {\n        \"id\": 1,\n        \"title\": \"New Approaches Summit: NYC 2025\",\n        \"date\": \"2025-09-22\",\n        \"time\": \"08:00\",\n        \"location\": \"New York City\",\n        \"organizer\": \"Eventbrite\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"4th Annual Summit hosted during UNGA and climate week.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/e/new-approaches-summit-nyc-2025-4th-annual-date-tickets-1029039413587\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"UN High-Level Plenary Meeting\",\n        \"date\": \"2025-09-25\",\n        \"time\": null,\n        \"location\": \"UN Headquarters, New York\",\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": \"Meeting bringing together governments, civil society, and youth partners.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.instagram.com/p/DNgO-FVNP0r/\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Navigating the 2025 United Nations General Assembly\",\n        \"date\": \"2025-09-23\",\n        \"time\": null,\n        \"location\": \"New York City\",\n        \"organizer\": \"United Nations\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"80th session of the UN General Assembly with global leaders convening.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://unfoundation.org/unga80/\"\n    }\n]",
+  "parsed_events": [
+    {
+      "id": 1,
+      "title": "New Approaches Summit: NYC 2025",
+      "date": "2025-09-22",
+      "time": "08:00",
+      "location": "New York City",
+      "organizer": "Eventbrite",
+      "access_req": "unknown",
+      "summary": "4th Annual Summit hosted during UNGA and climate week.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/e/new-approaches-summit-nyc-2025-4th-annual-date-tickets-1029039413587"
+    },
+    {
+      "id": 2,
+      "title": "UN High-Level Plenary Meeting",
+      "date": "2025-09-25",
+      "time": null,
+      "location": "UN Headquarters, New York",
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": "Meeting bringing together governments, civil society, and youth partners.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/p/DNgO-FVNP0r/"
+    },
+    {
+      "id": 3,
+      "title": "Navigating the 2025 United Nations General Assembly",
+      "date": "2025-09-23",
+      "time": null,
+      "location": "New York City",
+      "organizer": "United Nations",
+      "access_req": "unknown",
+      "summary": "80th session of the UN General Assembly with global leaders convening.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://unfoundation.org/unga80/"
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 416,
+    "prompt_tokens": 9077,
+    "total_tokens": 9493,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.0016111499999999998
+}

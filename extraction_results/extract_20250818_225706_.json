@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_225706",
+  "url": "https://www.instagram.com/nycprotestcoverage/",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/nycprotestcoverage/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.14,
+    "request_id": "8a6e48ea-cfe1-4d98-960c-b6ed9b001e9e"
+  },
+  "cost": 0.01
+}

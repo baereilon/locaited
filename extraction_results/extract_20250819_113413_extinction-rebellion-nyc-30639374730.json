@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250819_113413",
+  "url": "https://www.eventbrite.com/o/extinction-rebellion-nyc-30639374730",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.eventbrite.com/o/extinction-rebellion-nyc-30639374730",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 1.38,
+    "request_id": "035e3b4f-2a33-4813-b84b-aed5b27c8fb6"
+  },
+  "cost": 0.01
+}

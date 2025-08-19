@@ -1,0 +1,15 @@
+{
+  "url": "https://apnews.com/article/musk-europe-politics-influencers-x-twitter-f11463f853af6e152e1972c90131e43d",
+  "timestamp": "2025-08-18T22:57:11.391489",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://apnews.com/article/musk-europe-politics-influencers-x-twitter-f11463f853af6e152e1972c90131e43d",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.08,
+    "request_id": "bd330e9e-8fab-42d8-9419-6a0988ba0317"
+  }
+}

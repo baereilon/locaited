@@ -1,21 +1,30 @@
-Day,date,event,type,access,Location ,Time
-,"Mar 14, 2025",Purim ,Cultural Event,open to all,South Williamsburg,Throughout the day
-Monday ,"Mar 17, 2025",St. Patrick's Day Parade,Parade,open to all,Marches along Fifth Avenue from 44th to 79th Street,Starts at 11:00 AM
-Wednesday,"Mar 19, 2025",Eli Sharabi in the UN ,Political event,Need to be approved,United Nations HQ,
-Tuesday,"Apr 1, 2025",International women of courge,Political event,Need to be approved,"Department of State, DC",
-Saturday,"Apr 5, 2025",Hands off (Protest against trump),Protest,Press Card only ,Bryant Park,1:00 PM
-Monday,"Apr 7, 2025",Trump meeting Bibi,Political event,Need to be approved,White House,
-,"Apr 19, 2025",March to Protect Migrants and the Planet By 50501 NY,Protest,open to all,"Bryant Park,",12:00
-Sunday,"Apr 20, 2025",Easter Parade,Cultural Event,open to all,"Fifth Avenue, from 49th to 57th Street",10:00 AM – 4:00 PM
-,,UN Security councel,Political event,,United Nations HQ,
-Sunday,"Aug 10, 2025",The National Dominican Day Parade,Parade,Press Card only ,6th Avenue in Manhattan from 36th to 55th Street,11:00 AM
-Sunday,"Sep 7, 2025",MTV Awards,Cultural Event,Need to be approved,UBS Arena,8:00 PM  11:00 PM
-,9–23 Sep 2025,The 80th session of the UN General Assembly (UNGA 80),Political event,Need to be approved,United Nations HQ,
-,Sep 6- sep 11 2024,New York Fashion week,Cultural Event,Need to be approved,Natoinal History Museum,
-,"Oct 28, 2024",CFDA Fashion awards,Cultural Event,Need to be approved,Natoinal History Museum,
-,"May 5, 2025",Met Gala,Cultural Event,Press Card only ,Metrpolitan Museum of Art,
-,July 28th 2025,Midtown shooting,News,Press Card only ,,
-,July 31st 2025,Funeral of police officer killed in shooting,News,Press Card only ,"Parkchester Jame Masjid, a mosque in the Bronx",
-,May 18th 2025,Israel Parade Day,Cultural Event,Press Card only ,5th avenue,
-,July 2nd 2025,P Diddy trial,News,open to all,"Federal District Court in Lower Manhattan, specifically at 500 Pearl Street",
-,"June 24th, 2025","Mayor Election Day - poll sites, leading candidates' public appearances and press conferences",News,open to all,Throughout the city,
+Day,date,event,type,access,Location,Time,Future event,Source URL,where the event was found,
+,"Mar 14, 2025",traditional Purim celebration at south williamsburg ,Cultural Event,open to all,South Williamsburg,Throughout the day,No,,,
+Monday,"Mar 17, 2025",St. Patrick's Day Parade,Parade,open to all,Marches along Fifth Avenue from 44th to 79th Street,Starts at 11:00 AM,No,,,
+Wednesday,"Mar 19, 2025",Eli Sharabi speaks at the UN security counsil,Political event,Need to be approved,United Nations HQ,,No,,,
+Tuesday,"Apr 1, 2025",International women of courge award ceremony,Political event,Need to be approved,"Department of State, DC",,No,,,
+Saturday,"Apr 5, 2025",Hands off (Protest against trump),Protest,Press Card only,Bryant Park,1:00 PM,No,,,
+Monday,"Apr 7, 2025",Trump meeting Bibi at the white house,Political event,Need to be approved,White House,,No,,,
+,"Apr 19, 2025",March to Protect Migrants and the Planet By 50501 NY,Protest,open to all,"Bryant Park,",12:00,No,,,
+Sunday,"Apr 20, 2025",Easter Parade,Cultural Event,open to all,"Fifth Avenue, from 49th to 57th Street",10:00 AM – 4:00 PM,No,,,
+,"Aug 15, 2025",UN Security councel on israeli hostages condition ,Political event,,United Nations HQ,,No,,,
+Sunday,"Aug 10, 2025",The National Dominican Day Parade,Parade,Press Card only,6th Avenue in Manhattan from 36th to 55th Street,11:00 AM,No,,,
+Sunday,"Sep 7, 2025",MTV Awards,Cultural Event,Need to be approved,UBS Arena,8:00 PM  11:00 PM,No,,,
+,"Sep 9, 2025",The 80th session of the UN General Assembly (UNGA 80),Political event,Need to be approved,United Nations HQ,,No,,,
+,"Sep 6, 2025",New York Fashion week,Cultural Event,Need to be approved,Natoinal History Museum,,No,,,
+,"Oct 28, 2025",CFDA Fashion awards,Cultural Event,Need to be approved,Natoinal History Museum,,No,,,
+,"May 5, 2025",Met Gala,Cultural Event,Press Card only,Metrpolitan Museum of Art,,No,,,
+,"Jul 28, 2025",Midtown shooting,News,Press Card only,,,No,,,
+,"Jul 31, 2025",Funeral of police officer killed in shooting,News,Press Card only,"Parkchester Jame Masjid, a mosque in the Bronx",,No,,,
+,"May 18, 2025",Israel Parade Day,Cultural Event,Press Card only,5th avenue,,No,,,
+,"Jul 2, 2025",P Diddy trial,News,open to all,"Federal District Court in Lower Manhattan, specifically at 500 Pearl Street",,No,,,
+,"Jun 24, 2025","Mayor Election Day - poll sites, leading candidates' public appearances and press conferences",News,open to all,Throughout the city,,No,,,
+,"Aug 16, 2025",STOP STARVING GAZA: Massive March for Humanity in NYC!,Protest,open to all,Bryant Park NYPL Steps,2:00 PM,No,https://x.com/answercoalition/status/1953212184885903379,on their twitter account ,on their twitter account 
+,"Aug 17, 2025",Stanging togather protest ,Protest,open to all,"Union Square , new york ",5:00 PM,No,https://www.instagram.com/p/DNVz-letBvR/,standing togather instagram ,standing togather instagram 
+,"Aug 20, 2025",Noise Demo Genocide Profiteers at the Brooklyn Navy Yard,Protest,open to all,"141 FLUSHING AVE., BROOKLYN",4:30PM-6:30PM,Yes,https://www.instagram.com/p/DNgweBPS9Vm/?img_index=1,on this website: https://uscpr.org/pro-palestine-protests/,on this website: https://uscpr.org/pro-palestine-protests/
+,"Sep 4, 2025",Taxpayers Against Genocide — Protest for Justic,Protest,open to all,Foley Square,noon ,Yes,https://www.instagram.com/p/DNTEzfqRInV/,on this website: https://uscpr.org/pro-palestine-protests/,on this website: https://uscpr.org/pro-palestine-protests/
+,"Sep 4, 2025",2025 Labor Power 100,Press Conference,Press Card only ,"Manhattan Penthouse, 80 Fifth Avenue, 17th Floor, New York, NY 10011",6:30 pm - 8:30 pm,Yes,https://events.cityandstate.com/2025-labor-power-100/?oref=csny-events-lander-feature,,
+,"Sep 6, 2025",2025 NYC Labor Day Parade & March,Parade,open to all,"5th Ave & 44th St
+New York, NY 10017",10am – 4pm EDT,Yes,https://www.mobilize.us/mayday/event/793169/,on the 50501 website,on the 50501 website
+,"Sep 7, 2025",Free Times Square concert to feature performances from 23 Broadway shows,Cultural Event,,Duffy Square on West 46th and West 47th streets between Broadway and Seventh Avenue,11 a.m,Yes,https://nypost.com/2025/08/18/us-news/free-times-square-concert-to-feature-performances-from-23-broadway-shows/?utm_source=chatgpt.com,,
+,"Sep 26, 2025",Modi will speak at the UNGA 80,Political event,Need to be approved,UN general assembly ,,Yes,,,

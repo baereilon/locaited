@@ -1,0 +1,150 @@
+{
+  "timestamp": "20250819_101450",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-19\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.nyc.gov/assets/cecm/downloads/pdf/manhattan-parades-street-closures-2025.pdf\",\n    \"title\": \"[PDF] PARADES AND FESTIVALS IN MANHATTAN - NYC.gov\",\n    \"snippet\": \"change at the discretion of NYPD. STREET ...",
+  "raw_response": "```json\n[\n    {\n        \"id\": 1,\n        \"title\": \"Parades and Festivals in Manhattan\",\n        \"date\": \"2025-05-17\",\n        \"time\": \"07:00\",\n        \"location\": \"Madison Avenue from 23rd Street to 38th Street, Sixth Avenue from West 18th Street to West 8th Street, West 8th Street from Sixth Avenue to Avenue A, Fifth Avenue from 51st Street to 79th Street\",\n        \"organizer\": \"City of New York\",\n        \"access_req\": \"open to all\",\n        \"summary\": \"Parades and festivals in Manhattan with road closures and traffic detours.\",\n        \"has_basic_info\": true,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": true,\n        \"source_url\": \"https://www.nyc.gov/assets/cecm/downloads/pdf/manhattan-parades-street-closures-2025.pdf\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"SIAs at the 2025 NYC Puerto Rican Day Parade\",\n        \"date\": \"2025-06-14\",\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"Eventbrite\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"SIAs participation at the 2025 NYC Puerto Rican Day Parade.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/e/sias-at-the-2025-nyc-puerto-rican-day-parade-tickets-1321149175749\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"March with MJE at Israel Day Parade 2025\",\n        \"date\": \"2025-05-17\",\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"Eventbrite\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"March with MJE at the Israel Day Parade 2025 with included MJE Swag T-Shirt.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/e/march-with-mje-israel-day-parade-2025-mje-swag-t-shirt-included-tickets-1312178694799\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"March with the Public Advocate at the National Dominican Day Parade\",\n        \"date\": \"2025-06-14\",\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"Eventbrite\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"March with the Public Advocate at the National Dominican Day Parade.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/e/march-with-the-public-advocate-at-the-national-dominican-day-parade-tickets-1478815349519\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Celebrate Israel Parade Embargo\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": null,\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-israelparade-map.pdf\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Dominican Day Parade Boat Party Yacht Cruise\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"Eventbrite\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"Latin Boat Party Yacht Cruise in NYC with various entertainment.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.eventbrite.com/e/dominican-day-parade-boat-party-yacht-cruise-tickets-1217132178109\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Puerto Rican Day Parade Embargo\",\n        \"date\": null,\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": null,\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-national-puerto-rican-day-parade-map.pdf\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"National Puerto Rican Day Parade\",\n        \"date\": \"2026-06-14\",\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": \"PR Parade\",\n        \"access_req\": \"unknown\",\n        \"summary\": \"America's Largest Cultural Celebration - 69th Annual Puerto Rican Day Parade.\",\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://on.nyc.gov/2KCgHAJ\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Israeli Day Parade 2025 - ONE WORD\",\n        \"date\": \"2025-05-18\",\n        \"time\": null,\n        \"location\": null,\n        \"organizer\": null,\n        \"access_req\": \"unknown\",\n        \"summary\": null,\n        \"has_basic_info\": false,\n        \"is_duplicate_of\": null,\n        \"is_past_event\": false,\n        \"source_url\": \"https://www.instagram.com/reel/DJzf5_QP6qi/\"\n    }\n]\n```",
+  "parsed_events": [
+    {
+      "id": 1,
+      "title": "Parades and Festivals in Manhattan",
+      "date": "2025-05-17",
+      "time": "07:00",
+      "location": "Madison Avenue from 23rd Street to 38th Street, Sixth Avenue from West 18th Street to West 8th Street, West 8th Street from Sixth Avenue to Avenue A, Fifth Avenue from 51st Street to 79th Street",
+      "organizer": "City of New York",
+      "access_req": "open to all",
+      "summary": "Parades and festivals in Manhattan with road closures and traffic detours.",
+      "has_basic_info": true,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.nyc.gov/assets/cecm/downloads/pdf/manhattan-parades-street-closures-2025.pdf"
+    },
+    {
+      "id": 2,
+      "title": "SIAs at the 2025 NYC Puerto Rican Day Parade",
+      "date": "2025-06-14",
+      "time": null,
+      "location": null,
+      "organizer": "Eventbrite",
+      "access_req": "unknown",
+      "summary": "SIAs participation at the 2025 NYC Puerto Rican Day Parade.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/e/sias-at-the-2025-nyc-puerto-rican-day-parade-tickets-1321149175749"
+    },
+    {
+      "id": 3,
+      "title": "March with MJE at Israel Day Parade 2025",
+      "date": "2025-05-17",
+      "time": null,
+      "location": null,
+      "organizer": "Eventbrite",
+      "access_req": "unknown",
+      "summary": "March with MJE at the Israel Day Parade 2025 with included MJE Swag T-Shirt.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/e/march-with-mje-israel-day-parade-2025-mje-swag-t-shirt-included-tickets-1312178694799"
+    },
+    {
+      "id": 4,
+      "title": "March with the Public Advocate at the National Dominican Day Parade",
+      "date": "2025-06-14",
+      "time": null,
+      "location": null,
+      "organizer": "Eventbrite",
+      "access_req": "unknown",
+      "summary": "March with the Public Advocate at the National Dominican Day Parade.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/e/march-with-the-public-advocate-at-the-national-dominican-day-parade-tickets-1478815349519"
+    },
+    {
+      "id": 5,
+      "title": "Celebrate Israel Parade Embargo",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": null,
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-israelparade-map.pdf"
+    },
+    {
+      "id": 6,
+      "title": "Dominican Day Parade Boat Party Yacht Cruise",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": "Eventbrite",
+      "access_req": "unknown",
+      "summary": "Latin Boat Party Yacht Cruise in NYC with various entertainment.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.eventbrite.com/e/dominican-day-parade-boat-party-yacht-cruise-tickets-1217132178109"
+    },
+    {
+      "id": 7,
+      "title": "Puerto Rican Day Parade Embargo",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": null,
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-national-puerto-rican-day-parade-map.pdf"
+    },
+    {
+      "id": 8,
+      "title": "National Puerto Rican Day Parade",
+      "date": "2026-06-14",
+      "time": null,
+      "location": null,
+      "organizer": "PR Parade",
+      "access_req": "unknown",
+      "summary": "America's Largest Cultural Celebration - 69th Annual Puerto Rican Day Parade.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://on.nyc.gov/2KCgHAJ"
+    },
+    {
+      "id": 9,
+      "title": "Israeli Day Parade 2025 - ONE WORD",
+      "date": "2025-05-18",
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": null,
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/reel/DJzf5_QP6qi/"
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 1295,
+    "prompt_tokens": 7835,
+    "total_tokens": 9130,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.00195225
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250818_230156",
+  "url": "https://www.instagram.com/accounts/login/",
+  "response": {
+    "results": [
+      {
+        "url": "https://www.instagram.com/accounts/login/",
+        "raw_content": "Login \u2022 Instagram\n\n===============\n\n[Meta](https://about.meta.com/)\n\n[About](https://about.instagram.com/)\n\n[Blog](https://about.instagram.com/blog/)\n\n[Jobs](https://about.instagram.com/about-us/careers)\n\n[Help](https://help.instagram.com/)\n\n[API](https://developers.facebook.com/docs/instagram)\n\n[Privacy](https://www.instagram.com/legal/privacy/)\n\n[Consumer Health Privacy](https://www.instagram.com/legal/privacy/health_privacy_policy/)\n\n[Terms](https://www.instagram.com/legal/terms/)\n\n[Locations](https://www.instagram.com/explore/locations/)\n\n[Instagram Lite](https://www.instagram.com/web/lite/)\n\n[Threads](https://www.threads.com/)\n\n[Contact Uploading & Non-Users](https://www.facebook.com/help/instagram/261704639352628)\n\n[Meta Verified](https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer)\n\nEnglish\n\n\u00a9 2025 Instagram from Meta\n",
+        "images": []
+      }
+    ],
+    "failed_results": [],
+    "response_time": 0.0,
+    "request_id": "8786cd5f-6479-41ad-b681-fa945736e9dd"
+  },
+  "cost": 0.01
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250818_225640",
+  "url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-national-puerto-rican-day-parade-map.pdf",
+  "response": {
+    "results": [
+      {
+        "url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-national-puerto-rican-day-parade-map.pdf",
+        "raw_content": "Belfo rd - Midtown 11th Ave 12 t h Ave The High Line Chelsea Amsterdam Ave W 86th St W 77th St Ri v ers i d e Dr r Central Park W W 82nd St W 80th St W 84th St Riverside Park Central Park Upper West Side Edgewater Ferry Landing - Midtown The Lake 2nd Ave B roadw ay Park Ave W 39th St 11th Ave 11th Ave W 36th St E 63rd St W 60th St W 46th St W 50th St E 48th St E 66th St W 55th St W 26th St 5th Ave W 72nd St W 52nd St W 29th St W 58th St E as t D r 9th Ave E 57th St Broadway W 57th St W 57th St W 34th St 72nd St Midtown South Midtown East Lincoln Square Upper East Side Clinton Midtown Turtle Bay Sutton Place Times Square Garment District Hells Kitchen Murray Hill Manhattan N 6th St - India W 23rd St 2nd Ave 1st Ave E 32nd St Lexington Ave W 26th St Madison Ave 9th Ave 8th Ave 7th Ave F D R Dr N FDR Dr Union Square Stuyvesant Town Gramercy Tudor City Flatiron District 5t E 102nd St E 99th St East D r E 96th St Park Carnegie Hill E 90th St - Soundview FDR Dr S 2nd Ave E 84th St E 82nd St 44th Dr 9th St E 86th St 27th Av e 12th St 1st Ave Vernon Blvd 3rd Ave 11th St 43rd A Lexington Ave E 90th St FDR Dr S Queensbridge Park Asto Ps G M Yorkville Lenox Hill Roosevelt Island Long C Eag 50th Ave 48th Ave 2nd St Hunters Point NYC OpenData, New Jersey Office of GIS, Esri, TomTom, Garmin, SafeGraph, GeoTechnologies, Inc, METI/NASA, USGS, EPA, NPS, US Census Bureau, USDA, USFWS Puerto Rican Day Parade Embargo Formation Route Dispersal Miscellaneous",
+        "images": []
+      }
+    ],
+    "failed_results": [],
+    "response_time": 0.27,
+    "request_id": "78ac705f-e500-4cb8-b414-ce3e155df86c"
+  },
+  "cost": 0.01
+}

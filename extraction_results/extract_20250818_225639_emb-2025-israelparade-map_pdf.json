@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_225639",
+  "url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-israelparade-map.pdf",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.nyc.gov/html/dot/downloads/pdf/emb-2025-israelparade-map.pdf",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 0.06,
+    "request_id": "7cb9e56f-46e3-4efe-92a1-38cb1513343f"
+  },
+  "cost": 0.01
+}

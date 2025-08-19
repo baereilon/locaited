@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_225842",
+  "url": "https://www.instagram.com/p/DJUe8e4iiyx/",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.instagram.com/p/DJUe8e4iiyx/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.09,
+    "request_id": "4a305e7b-5224-48ae-96c6-635d8ea82e9b"
+  },
+  "cost": 0.01
+}

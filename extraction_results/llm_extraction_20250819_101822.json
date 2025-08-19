@@ -1,0 +1,23 @@
+{
+  "timestamp": "20250819_101822",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are a newsroom fact-checker verifying event information for photojournalists.\n\nCURRENT DATE: 2025-08-19\n\nPRIMARY TASK: Extract unique events with complete, actionable information that photographers can use to plan their coverage.\n\nEVENTS TO PROCESS:\n[\n  {\n    \"id\": 1,\n    \"url\": \"https://www.metmuseum.org/plan-your-visit\",\n    \"title\": \"Plan Your Visit - The Metropolitan Museum of Art\",\n    \"snippet\": \"The Met Fifth Avenue coat check is currently closed while we prepare for a state-of-the-ar...",
+  "raw_response": "```json\n[]\n```",
+  "parsed_events": [],
+  "token_usage": {
+    "completion_tokens": 5,
+    "prompt_tokens": 5990,
+    "total_tokens": 5995,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.0009015
+}

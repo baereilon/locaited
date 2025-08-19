@@ -16,7 +16,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///locaited.db")
 
 # Cost Management
 MAX_COST_PER_QUERY = float(os.getenv("MAX_COST_PER_QUERY", "0.10"))
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini")
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent

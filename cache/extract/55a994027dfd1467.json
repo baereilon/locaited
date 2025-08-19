@@ -1,0 +1,16 @@
+{
+  "url": "https://www.nyc.gov/nyc-resources/agencies.page",
+  "timestamp": "2025-08-18T22:56:43.625766",
+  "extracted": {
+    "results": [
+      {
+        "url": "https://www.nyc.gov/nyc-resources/agencies.page",
+        "raw_content": "#### Official website. How you know\n\n##### **Official websites use .gov**\n\nA .gov website belongs to an official government organization in the United States.\n\n##### **Secure .gov websites use HTTPS**\n\nA lock (\ud83d\udd12) or https:// means you\u2019ve safely connected to the .gov website. Share sensitive information only on official, secure websites.\n\n![NYC Logo](/content/experience-fragments/global/us/en/site/header/master/_jcr_content/root/globalheader/image.coreimg.svg/1741611944383/nyc-logo.svg \"NYC Logo\")\n\n### Top languages\n\n### More languages\n\n# Agency directory\n\nSearch a directory of agencies, offices, boards, and other city government organizations.\n\n### More on nyc.gov\n\n\u00a9 City of New York.\n2025\nAll Rights Reserved. NYC is a trademark and service mark of the City of New York.",
+        "images": []
+      }
+    ],
+    "failed_results": [],
+    "response_time": 0.14,
+    "request_id": "1ca03d73-d93c-49e1-8f59-b1590862dd19"
+  }
+}

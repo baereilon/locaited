@@ -1,0 +1,51 @@
+{
+  "timestamp": "20250818_225846",
+  "total_events": 3,
+  "events_with_basic_info": 0,
+  "past_events": 1,
+  "basic_info_percentage": 0.0,
+  "events": [
+    {
+      "id": 1,
+      "title": "Met Gala 2025",
+      "date": "2025-05-05",
+      "time": "Evening",
+      "location": "New York's Metropolitan Museum of Art",
+      "organizer": "Metropolitan Museum of Art",
+      "access_req": "unknown",
+      "summary": "Annual Met Gala celebrating Black history, culture, and style with a theme of 'Tailored for You'.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": true,
+      "source_url": "https://www.cnn.com/2025/05/05/style/met-gala-2025-red-carpet-fashion"
+    },
+    {
+      "id": 2,
+      "title": "MET GALA VIEWING PARTY 2025",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": "FGIDC",
+      "access_req": "unknown",
+      "summary": "A viewing party for the Met Gala 2025 hosted by FGIDC for fashion professionals in the region.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/p/DINQJrFRQGL/"
+    },
+    {
+      "id": 3,
+      "title": "Chrysler Museum & Glass Studio",
+      "date": null,
+      "time": null,
+      "location": null,
+      "organizer": null,
+      "access_req": "unknown",
+      "summary": "Highly anticipated exhibition opening with the prestigious Met Gala event.",
+      "has_basic_info": false,
+      "is_duplicate_of": null,
+      "is_past_event": false,
+      "source_url": "https://www.instagram.com/p/DJRkIqSqcN1/"
+    }
+  ]
+}

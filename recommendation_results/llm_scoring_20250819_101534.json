@@ -1,0 +1,85 @@
+{
+  "timestamp": "20250819_101534",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are an expert event publisher for photojournalists in NYC.\n\nYOUR PRIMARY JOB: Evaluate if this batch of events is good enough for the user, or if we need another search cycle.\n\nUSER PROFILE:\n- Interests: \n- Keywords: meeting, cultural, opening, press, parade, mayor, celebration, conference, festival, summit\n- Credentials: press_card\n- Location: NYC\n\nGATE DECISION CRITERIA (MOST IMPORTANT):\n- Are these REAL, SPECIFIC events (not profile pages or calendars)?\n- Do they have actionable informati...",
+  "full_prompt_length": 6077,
+  "raw_response": "[\n  {\n    \"id\": 1,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event does not have actionable information for planning coverage. It is not specific to NYC and lacks key details like date, time, and location.\"\n  },\n  {\n    \"id\": 2,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event is not specific to NYC and lacks key details like date, time, and location. It is also a protest in Texas, not relevant to the user.\"\n  },\n  {\n    \"id\": 3,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event is in France, not NYC. It lacks actionable information for coverage and is not aligned with the user's interests.\"\n  },\n  {\n    \"id\": 4,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event does not have a specific date, time, or location. It is not a specific event but rather a general announcement.\"\n  },\n  {\n    \"id\": 5,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event does not have a specific date, time, or location. It is not a specific event but rather a general announcement.\"\n  },\n  {\n    \"id\": 6,\n    \"score\": 0.5,\n    \"photo_title\": \"CULTURAL: Linda Yaccarino Steps Down as X CEO - July 9 at Elon Musk's X, NYC\",\n    \"rationale\": \"Visual interest in capturing the moment of CEO resignation. Access may be limited but potential for exclusive shots. Aligns with user's interest in cultural events.\"\n  },\n  {\n    \"id\": 7,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event lacks specific details like date, time, and location. It is not a specific event but rather a general article.\"\n  },\n  {\n    \"id\": 8,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event lacks specific details like date, time, and location. It is not a specific event but rather a general article.\"\n  },\n  {\n    \"id\": 9,\n    \"score\": 0.5,\n    \"photo_title\": \"PROTEST: X Removes Posts by Musk Chatbot Grok - July 9 at Unknown Location\",\n    \"rationale\": \"Visual interest in covering the aftermath of controversial posts. Limited by unknown location but aligns with user's interest in press-related events.\"\n  },\n  {\n    \"id\": 10,\n    \"score\": 0,\n    \"photo_title\": \"Not a valid event\",\n    \"rationale\": \"This event is a past event and not actionable for coverage. It is also not specific to NYC and lacks detailed location information.\"\n  }\n]",
+  "parsed_scores": [
+    {
+      "id": 1,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event does not have actionable information for planning coverage. It is not specific to NYC and lacks key details like date, time, and location."
+    },
+    {
+      "id": 2,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event is not specific to NYC and lacks key details like date, time, and location. It is also a protest in Texas, not relevant to the user."
+    },
+    {
+      "id": 3,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event is in France, not NYC. It lacks actionable information for coverage and is not aligned with the user's interests."
+    },
+    {
+      "id": 4,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event does not have a specific date, time, or location. It is not a specific event but rather a general announcement."
+    },
+    {
+      "id": 5,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event does not have a specific date, time, or location. It is not a specific event but rather a general announcement."
+    },
+    {
+      "id": 6,
+      "score": 0.5,
+      "photo_title": "CULTURAL: Linda Yaccarino Steps Down as X CEO - July 9 at Elon Musk's X, NYC",
+      "rationale": "Visual interest in capturing the moment of CEO resignation. Access may be limited but potential for exclusive shots. Aligns with user's interest in cultural events."
+    },
+    {
+      "id": 7,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event lacks specific details like date, time, and location. It is not a specific event but rather a general article."
+    },
+    {
+      "id": 8,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event lacks specific details like date, time, and location. It is not a specific event but rather a general article."
+    },
+    {
+      "id": 9,
+      "score": 0.5,
+      "photo_title": "PROTEST: X Removes Posts by Musk Chatbot Grok - July 9 at Unknown Location",
+      "rationale": "Visual interest in covering the aftermath of controversial posts. Limited by unknown location but aligns with user's interest in press-related events."
+    },
+    {
+      "id": 10,
+      "score": 0,
+      "photo_title": "Not a valid event",
+      "rationale": "This event is a past event and not actionable for coverage. It is also not specific to NYC and lacks detailed location information."
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 662,
+    "prompt_tokens": 1718,
+    "total_tokens": 2380,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.0006548999999999999
+}
