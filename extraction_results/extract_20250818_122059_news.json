@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_122059",
+  "url": "https://www.nyc.gov/office-of-the-mayor/news",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.nyc.gov/office-of-the-mayor/news",
+        "error": "Failed to fetch content"
+      }
+    ],
+    "response_time": 0.13,
+    "request_id": "d440fd92-c353-4642-abc7-22e0b302648a"
+  },
+  "cost": 0.01
+}

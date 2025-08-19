@@ -1,0 +1,51 @@
+version,query_id,event_title,event_date,event_location,source_url,has_basic_info,is_interesting,validation_notes
+0.1.0,parades,Ana @ Explore NYC Free | 2025 Parades you won't want to miss ...,,NYC,https://www.instagram.com/explorenycfree/reel/DEgVTUOPJbX/?locale=es&hl=da,FALSE,No,not a specific event
+0.1.0,parades,The Bronx Was Lit! Dominican Day Parade 2025 w - Facebook,,Bronx,https://www.facebook.com/groups/callejeandopr/posts/24909920811943109/,FALSE,No,Title indicates this was posted after event
+0.1.0,parades,"Luiz Rampelotto on Instagram: ""NEW YORK, NY - MAY 5: Manuel ...","June 08, 2025",NYC,https://www.instagram.com/p/DJSvIQxMAfu/,FALSE,No,
+0.1.0,parades,"PUERTO RICAN DAY PARADE Sunday, June 8th, 2025 ... - Facebook",Sunday,,https://www.facebook.com/groups/444280736608846/posts/1332142511155993/,FALSE,Yes,
+0.1.0,parades,Celebrating Puerto Rican Culture and Pride - Facebook,Sunday,5th Avenue,https://www.facebook.com/groups/1490733147840016/posts/3886345858278721/,TRUE,Yes,
+0.1.0,parades,Puerto Rican and Dominican parades cancelled due to COVID-19,,,https://www.facebook.com/groups/wakefieldbronx/posts/10157751373959681/,FALSE,No,Title indicates event cancelled
+0.1.0,parades,Celebrating Puerto Rico in Northwest Bronx - Facebook,,Bronx,https://www.facebook.com/groups/488690227907253/posts/9580666438709541/,FALSE,Yes,
+0.1.0,parades,The Puerto Rican Hispanic Day Parade And Festival.... - Facebook,,,https://www.facebook.com/groups/YonkersNewswire/posts/4105872256336988/,FALSE,Yes,
+0.1.0,parades,Does anyone here have information regarding Jewish Puerto Ricans.,,,https://www.facebook.com/groups/1490733147840016/posts/3275615996018380/,FALSE,No,not a specific event
+0.1.0,parades,"Hola mi gente, Happy Puerto Rican Day Parade Day! . WE ARE ...",,,https://www.facebook.com/groups/323785189934008/posts/hola-mi-gente-happy-puerto-rican-day-parade-daywe-are-now-just-6-days-and-counti/1022448176734369/,FALSE,Yes,
+0.1.0,protests,Demonstrations in NYC this weekend? - Facebook,"February 5, 2025",NYC,https://www.facebook.com/groups/50501movement/posts/1115129790224349/,FALSE,No,not a specific event
+0.1.0,protests,"Aug. 16, 2025 Saugerties, NY Weekly demonstration. - Facebook","April 5, 2025",,https://www.facebook.com/groups/50501movement/posts/1116768206727174/,FALSE,No,
+0.1.0,protests,May Day protests: '50501' movement hosts anti-Trump ... - CNN,"April 19, 2025",NYC,https://www.cnn.com/2025/05/01/us/50501-movement-anti-trump-protests,FALSE,Yes,Title indicates this was posted after event
+0.1.0,protests,BREAKING! Tens of thousands are marching in NYC to demand an ...,"August 16, 2025",NYC,https://www.instagram.com/reel/DNbcQiOpw0K/,FALSE,Yes,Title indicates this was posted after event
+0.1.0,protests,"GLOBAL MARCH TO GAZA- NYC PROTEST 🗓️Saturday, June 14 ...",June 14 2025,NYC,https://www.instagram.com/p/DK0jEvVunHG/,FALSE,Yes,
+0.1.0,protests,Upcoming events and marshaling for the 50501 Movement - Facebook,"June 14, 2025",NYC,https://www.facebook.com/groups/50501movement/posts/1027871255616870/,FALSE,Yes,
+0.1.0,protests,NOW IN NYC: PROTESTERS DEMAND AN END TO THE U.S. ...,"July 27, 2025",NYC,https://www.instagram.com/reel/DMnoKs6My2f/,FALSE,Yes,Title indicates this was posted after event
+0.1.0,protests,No Kings Day Protests Against President Trump's Military - Facebook,"June 14, 2025",,https://www.facebook.com/groups/50501movement/posts/1036778238059505/,FALSE,Yes,
+0.1.0,protests,"Anti Project 2025 Rally Times Square Saturday, July 27th 7pm.",Saturday,Times Square,https://www.facebook.com/TheOther98/posts/save-the-dateanti-project-2025-rallytimes-squaresaturday-july-27th-7pm/988161146689218/,TRUE,Yes,
+0.1.0,protests,"June 13, 2025 - News on protests over Trump's immigration ... - CNN","June 13, 2025",NYC,https://www.cnn.com/us/live-news/la-protests-ice-raids-trump-06-12-25,FALSE,No,Not a specific event
+0.1.0,un_events,"Next week, leaders from 193 nations will come together in New York ...",Next week,NYC,https://www.instagram.com/p/C_0d5tiPHOp/,FALSE,Yes,
+0.1.0,un_events,UN Security Council will meet in emergency session at 3 PM (NY ...,,,https://www.facebook.com/UN.News.Centre/posts/un-security-council-will-meet-in-emergency-session-at-3-pm-ny-time-as-us-backs-i/1128372872661647/,FALSE,Yes,
+0.1.0,un_events,New Approaches Summit: NYC 2025 - 4th Annual Date - Eventbrite,Monday,NYC,https://www.eventbrite.com/e/new-approaches-summit-nyc-2025-4th-annual-date-tickets-1029039413587,FALSE,No,
+0.1.0,un_events,The 78th session of the UN General Assembly! 18th September will ...,,,https://www.instagram.com/p/CwU8Q3XMo7a/,FALSE,Yes,
+0.1.0,un_events,National Model United Nations | NMUN•NY 2025 Week A ...,,,https://www.instagram.com/p/DIWdQppxoWy/,FALSE,Yes,
+0.1.0,un_events,The United Nations is hosting a Multistakeholder Hearing on the ...,,UN Headquarters,https://www.instagram.com/p/DKP81W5JFN6/,FALSE,Yes,
+0.1.0,un_events,United Nations General Assembly 80th anniversary - Facebook,,NYC,https://www.facebook.com/groups/557820646118106/posts/1238919238008240/,FALSE,Yes,
+0.1.0,un_events,The Consulate General is preparing for an important week during ...,,NYC,https://www.instagram.com/reel/DNYKDloONYV/,FALSE,No,Not a specific event
+0.1.0,un_events,United Nations Office for Disarmament Affairs - Instagram,next week,UN Headquarters,https://www.instagram.com/p/DK9-ci7Mapb/,TRUE,No,
+0.1.0,un_events,9th NYC GREEN SCHOOL CONFERENCE 2025 An official event of ...,,NYC,https://www.instagram.com/reel/DNVFfPTIuVO/,FALSE,No,
+0.1.0,political,TO BE RESCHEDULED New York State Budget Town Halls for ...,,NYC,https://www.facebook.com/groups/478570211740567/posts/610446958552891/,FALSE,No,
+0.1.0,political,weekly roundup: 🗳️ all in for @zohrankmamdani for NYC Mayor ...,,NYC,https://www.instagram.com/p/DNNzM0vunAC/,FALSE,No,Not a specific event
+0.1.0,political,Last week through the lens of City Council #ICYMI Committee of the ...,"July 14, 2025",,https://www.instagram.com/p/C6rZv2DpVDI/,FALSE,No,
+0.1.0,political,Important town hall coming up this Tuesday! Join Borough President ...,Tuesday,Queens,https://www.facebook.com/groups/joinblaque/posts/10081244655324778/,TRUE,Yes,
+0.1.0,political,Statement from New York City Council Spokesperson on Mayor ...,,NYC,https://www.facebook.com/groups/Ozoneparkvoice/posts/25111382601795267/,FALSE,No,
+0.1.0,political,It's been 16 days since Mayor Eric Adams has made himself ...,,Manhattan,https://www.instagram.com/reel/DGTy6CySgHW/,FALSE,No,
+0.1.0,political,The next Community Board 9 meeting will be tonight at Queens ...,this week,Queens,https://www.facebook.com/groups/241971517042542/posts/1298942198012130/,TRUE,No,
+0.1.0,political,Attending City Council Meetings in Rose Park Community - Facebook,,,https://www.facebook.com/groups/33457306091/posts/10162755967956092/,FALSE,No,
+0.1.0,political,Press Conference | Summer of Safety 2025 - Facebook,"July 1, 2025",,https://www.facebook.com/mountvernonny/videos/press-conference-summer-of-safety-2025/1732018030739092/,FALSE,No,
+0.1.0,political,The borough president held a press conference today. | Facebook,today,,https://www.facebook.com/groups/EltingvilleGreatKills/posts/24118185634542213/,FALSE,Yes,Title indicates this was posted after event
+0.1.0,cultural,What was your favorite look from this year's Met Gala ... - Instagram,,Metropolitan Museum,https://www.instagram.com/p/DJVW3V1A5VY/,FALSE,No,Title indicates this was posted after event
+0.1.0,cultural,And the 2025 Met Gala theme is… Previous Met Gala ... - Instagram,,,https://www.instagram.com/reel/DIwB3rrOzuB/,FALSE,No,Not a specific event
+0.1.0,cultural,The Met Gala 2025 theme was “Superfine: Tailoring Black Style ...,,,https://www.facebook.com/groups/1122801278927948/posts/1363475948193812/,FALSE,No,Title indicates this was posted after event
+0.1.0,cultural,2025 MET GALA: EVERYTHING YOU NEED TO KNOW ... - Instagram,"January 02, 2025",NYC,https://www.instagram.com/reel/DI2V0zQtNQw/,FALSE,Yes,
+0.1.0,cultural,"ESSENCE on Instagram: ""Always bet on Black. The 2025 Met Gala ...",,,https://www.instagram.com/p/DJUoJ_epQkX/,FALSE,No,Not a specific event
+0.1.0,cultural,Tailoring Black Style wardrobe styling  ! The Met Gala is ... - Instagram,"May 5, 2025",Metropolitan Museum,https://www.instagram.com/reel/DJSDhSuOD2k/,TRUE,No,
+0.1.0,cultural,If “dressed to impress” were a competition—Met Gala 2025 just won ...,,,https://www.instagram.com/p/DJSx2cpPV1q/,FALSE,No,
+0.1.0,cultural,"The Metropolitan Museum of Art (@metmuseum) · New York, NY","August 14, 2025",Metropolitan Museum,https://www.instagram.com/metmuseum/,TRUE,No,Not a specific event
+0.1.0,cultural,Did you know the Met Gala's theme is inspired by a museum ...,"May 5, 2025",,https://www.instagram.com/reel/DJSm28Mqwye/,FALSE,No,
+0.1.0,cultural,Fashion's biggest night globally is definitely The Met Gala! It's the ...,,Metropolitan Museum,https://www.instagram.com/p/DJYrcm1MD0G/,FALSE,Yes,

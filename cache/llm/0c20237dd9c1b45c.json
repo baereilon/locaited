@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-08-18T14:06:00.326045",
+  "cache_params": {
+    "events": [
+      {
+        "title": "Event 1",
+        "location": "NYC",
+        "summary": "Test"
+      }
+    ],
+    "interests": [
+      "protests"
+    ],
+    "keywords": [
+      "activism",
+      "climate"
+    ]
+  },
+  "result": {
+    "scores": [
+      0.8
+    ],
+    "cost": 0.001
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "version": "0.1.0",
+  "timestamp": "2025-08-18T15:44:41.834186",
+  "test_results": {
+    "parades": {
+      "query": "NYC parades Dominican Day Israeli Day Puerto Rican Pride Parade schedule 2025",
+      "unique_events_count": 10,
+      "total_results": 15,
+      "events_with_basic_info": 1,
+      "sample_events": [
+        {
+          "title": "Ana @ Explore NYC Free | 2025 Parades you won't want to miss ...",
+          "url": "https://www.instagram.com/explorenycfree/reel/DEgVTUOPJbX/?locale=es&hl=da",
+          "snippet": "June 29 Pride Parade August 10 Dominican Day Parade September 18 Mexican Independence Parade September 21 African American Day Parade October 31 NYC Village",
+          "date": "",
+          "location": "NYC",
+          "access": "public",
+          "has_basic_info": false
+        },
+        {
+          "title": "The Bronx Was Lit! Dominican Day Parade 2025 w - Facebook",
+          "url": "https://www.facebook.com/groups/callejeandopr/posts/24909920811943109/",
+          "snippet": "The Bronx Was Lit! Dominican Day Parade 2025 w/ Tokischa & Street Culture. Experience the energy of the Bronx Dominican Day P..",
+          "date": "",
+          "location": "Bronx",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Luiz Rampelotto on Instagram: \"NEW YORK, NY - MAY 5: Manuel ...",
+          "url": "https://www.instagram.com/p/DJSvIQxMAfu/",
+          "snippet": "... New York State Assemblymember Zohran Kwame Mamdani attend the 2025 National Puerto Rican Day Parade on June 08, 2025 in New York City. The",
+          "date": "June 08, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "PUERTO RICAN DAY PARADE Sunday, June 8th, 2025 ... - Facebook",
+          "url": "https://www.facebook.com/groups/444280736608846/posts/1332142511155993/",
+          "snippet": "Don't miss the Puerto Rican Day Parade this Saturday June 14th 2025 from 12 noon! See you there . May be an image of 9 people and text that",
+          "date": "Sunday",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Celebrating Puerto Rican Culture and Pride - Facebook",
+          "url": "https://www.facebook.com/groups/1490733147840016/posts/3886345858278721/",
+          "snippet": "... Puerto Rican Day Parade takes over 5th Avenue in New York City this Sunday. This year's theme, \"Plantando Bandera,\" promises to be an",
+          "date": "Sunday",
+          "location": "5th Avenue",
+          "access": "",
+          "has_basic_info": true
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "protests": {
+      "query": "NYC protests demonstrations rallies this week breaking",
+      "unique_events_count": 10,
+      "total_results": 15,
+      "events_with_basic_info": 1,
+      "sample_events": [
+        {
+          "title": "Demonstrations in NYC this weekend? - Facebook",
+          "url": "https://www.facebook.com/groups/50501movement/posts/1115129790224349/",
+          "snippet": "On February 5, 2025, a nationwide series of protests, known as \u201c50 Protests in 50 States\u201d or the 50501 Movement, is scheduled to take place",
+          "date": "February 5, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Aug. 16, 2025 Saugerties, NY Weekly demonstration. - Facebook",
+          "url": "https://www.facebook.com/groups/50501movement/posts/1116768206727174/",
+          "snippet": "On April 5, 2025, the 50501 movement is organizing nationwide \u201cHands Off!\u201d marches to protest the policies of the #TrumpAdministration and the",
+          "date": "April 5, 2025",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "May Day protests: '50501' movement hosts anti-Trump ... - CNN",
+          "url": "https://www.cnn.com/2025/05/01/us/50501-movement-anti-trump-protests",
+          "snippet": "People take part in a protest organised to 'Protect Migrants, Protect the Planet' on April 19, 2025 in New York City. Organizers of the",
+          "date": "April 19, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "BREAKING! Tens of thousands are marching in NYC to demand an ...",
+          "url": "https://www.instagram.com/reel/DNbcQiOpw0K/",
+          "snippet": "5162 likes, 58 comments - peoplesforumnyc on August 16, 2025: \" BREAKING! Tens of thousands are marching in NYC to demand an end to the",
+          "date": "August 16, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "GLOBAL MARCH TO GAZA- NYC PROTEST \ud83d\uddd3\ufe0fSaturday, June 14 ...",
+          "url": "https://www.instagram.com/p/DK0jEvVunHG/",
+          "snippet": "... NYC PROTEST \ud83d\uddd3\ufe0fSaturday, June 14 2025 Zuccotti Park, New York, NY \u231a\ufe0f3 PM From Gaza to Los Angeles to NYC our struggles for liberation",
+          "date": "June 14 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "un_events": {
+      "query": "UN Security Council General Assembly meetings schedule NYC 2025",
+      "unique_events_count": 10,
+      "total_results": 10,
+      "events_with_basic_info": 1,
+      "sample_events": [
+        {
+          "title": "Next week, leaders from 193 nations will come together in New York ...",
+          "url": "https://www.instagram.com/p/C_0d5tiPHOp/",
+          "snippet": "Leaders from 193 nations will come together in New York City for the 79th session of the UN General Assembly (UNGA), where they will seek solutions for some of",
+          "date": "Next week",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "UN Security Council will meet in emergency session at 3 PM (NY ...",
+          "url": "https://www.facebook.com/UN.News.Centre/posts/un-security-council-will-meet-in-emergency-session-at-3-pm-ny-time-as-us-backs-i/1128372872661647/",
+          "snippet": "UN Security Council will meet in emergency session at 3 PM (NY Time), as US backs Israeli strikes on #Iran nuclear sites.",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "New Approaches Summit: NYC 2025 - 4th Annual Date - Eventbrite",
+          "url": "https://www.eventbrite.com/e/new-approaches-summit-nyc-2025-4th-annual-date-tickets-1029039413587",
+          "snippet": "*       *   Find Events *   Event Ticketing *       *   Find Events *   Event Ticketing About this event Join us on Monday, September 22nd, at the Harvard Club of New York City for the ****fourth annual New Approaches to Tobacco Control & Harm Reduction summit****, held alongside the start of United Nations General Assembly (UNGA80) and climate week. This one-day event brings together a diverse group of experts from various sectors (including government, public health, policy, advocacy, regulato",
+          "date": "Monday",
+          "location": "NYC",
+          "access": "ticketed",
+          "has_basic_info": false
+        },
+        {
+          "title": "The 78th session of the UN General Assembly! 18th September will ...",
+          "url": "https://www.instagram.com/p/CwU8Q3XMo7a/",
+          "snippet": "18th September will be the first day of the High-Level Week, which marks a busy time of important meetings, negotiations and events for heads",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "National Model United Nations | NMUN\u2022NY 2025 Week A ...",
+          "url": "https://www.instagram.com/p/DIWdQppxoWy/",
+          "snippet": "For this conference, UNEA will focus on: Transforming Food Systems to Prevent Biodiversity Loss Environmental Recovery in Areas Affected by Armed Conflict Check",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "political": {
+      "query": "Mayor NYC press conference town hall City Council meeting schedule",
+      "unique_events_count": 10,
+      "total_results": 15,
+      "events_with_basic_info": 2,
+      "sample_events": [
+        {
+          "title": "TO BE RESCHEDULED New York State Budget Town Halls for ...",
+          "url": "https://www.facebook.com/groups/478570211740567/posts/610446958552891/",
+          "snippet": "POSTPONED FOR WEATHER: TO BE RESCHEDULED New York State Budget Town Halls for 2025 Join Senator May for two upcoming town hall meetings to",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "weekly roundup: \ud83d\uddf3\ufe0f all in for @zohrankmamdani for NYC Mayor ...",
+          "url": "https://www.instagram.com/p/DNNzM0vunAC/",
+          "snippet": "Our biennial SEIU Asian Pacific Islander Summit is set for Oct 3-4, 2025 in Minneapolis, Minnesota.",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Last week through the lens of City Council #ICYMI Committee of the ...",
+          "url": "https://www.instagram.com/p/C6rZv2DpVDI/",
+          "snippet": "Photo shared by Councilmember Jamie Gauthier on July 14, 2025 tagging @phlcouncil, @.",
+          "date": "July 14, 2025",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Important town hall coming up this Tuesday! Join Borough President ...",
+          "url": "https://www.facebook.com/groups/joinblaque/posts/10081244655324778/",
+          "snippet": "Upcoming town hall meeting in Southeastern Queens with Borough President Donovan Richards to discuss community concerns and needs. \udb85\ude48.",
+          "date": "Tuesday",
+          "location": "Queens",
+          "access": "",
+          "has_basic_info": true
+        },
+        {
+          "title": "Statement from New York City Council Spokesperson on Mayor ...",
+          "url": "https://www.facebook.com/groups/Ozoneparkvoice/posts/25111382601795267/",
+          "snippet": "Statement from New York City Council Spokesperson on Mayor Adams' Veto of Street Vending Reform Bill In response to Mayor Adams vetoing",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "cultural": {
+      "query": "Met Gala Fashion Week museum opening NYC major cultural events 2025",
+      "unique_events_count": 10,
+      "total_results": 15,
+      "events_with_basic_info": 2,
+      "sample_events": [
+        {
+          "title": "What was your favorite look from this year's Met Gala ... - Instagram",
+          "url": "https://www.instagram.com/p/DJVW3V1A5VY/",
+          "snippet": "The 2025 Met Gala took place at the Metropolitan Museum of Art in New York City, bringing together celebrities, designers, and tastemakers for fashion's",
+          "date": "",
+          "location": "Metropolitan Museum",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "And the 2025 Met Gala theme is\u2026 Previous Met Gala ... - Instagram",
+          "url": "https://www.instagram.com/reel/DIwB3rrOzuB/",
+          "snippet": "The exhibition will also include artwork, photography and film in addition to clothing and aims to paint a rich picture about power dynamics and",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "The Met Gala 2025 theme was \u201cSuperfine: Tailoring Black Style ...",
+          "url": "https://www.facebook.com/groups/1122801278927948/posts/1363475948193812/",
+          "snippet": "The Met Gala 2025 theme was \u201cSuperfine: Tailoring Black Style,\" which explores the history of Black dandyism and its influence on fashion.",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "2025 MET GALA: EVERYTHING YOU NEED TO KNOW ... - Instagram",
+          "url": "https://www.instagram.com/reel/DI2V0zQtNQw/",
+          "snippet": "Photo shared by Kaisha Huguley | NYC Influencer on January 02, 2025 tagging @happilyhuguley.",
+          "date": "January 02, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "ESSENCE on Instagram: \"Always bet on Black. The 2025 Met Gala ...",
+          "url": "https://www.instagram.com/p/DJUoJ_epQkX/",
+          "snippet": "The 2025 Met Gala made cultural history and broke records. This year's gala raised an unprecedented $31 million, making it the most successful",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    }
+  },
+  "overall_metrics": {
+    "total_unique_events": 50,
+    "avg_unique_events_per_query": 10.0,
+    "total_results": 70,
+    "avg_results_per_query": 14.0,
+    "total_events_with_basic_info": 7,
+    "pct_with_basic_info": 14.000000000000002,
+    "pending_validation": 50,
+    "total_api_cost": 0.05
+  }
+}

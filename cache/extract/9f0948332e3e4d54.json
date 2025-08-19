@@ -1,0 +1,15 @@
+{
+  "url": "https://www.facebook.com/groups/50501movement/posts/no-kings-organizers-set-next-protest-date-for-july-17th-httpswwwusatodaycomstory/1067244508346211/",
+  "timestamp": "2025-08-18T14:15:05.956701",
+  "extracted": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.facebook.com/groups/50501movement/posts/no-kings-organizers-set-next-protest-date-for-july-17th-httpswwwusatodaycomstory/1067244508346211/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.04,
+    "request_id": "0fa570d6-cf01-4713-8038-c35865f63ceb"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "test_suite": {
+    "name": "LocAIted Event Discovery Benchmark",
+    "description": "Standard queries to test event discovery quality",
+    "version": "1.0"
+  },
+  "queries": [
+    {
+      "id": "parades",
+      "query": "NYC parades Dominican Day Israeli Day Puerto Rican Pride Parade schedule 2025",
+      "description": "Test ability to find scheduled parades",
+      "expected_characteristics": {
+        "event_types": ["parade", "cultural event"],
+        "sources_quality": ["official", "news", "community"],
+        "time_range": "scheduled months in advance"
+      },
+      "success_criteria": {
+        "min_relevant_results": 3,
+        "max_facebook_ratio": 0.3,
+        "should_find": ["specific parade names", "dates", "routes"]
+      }
+    },
+    {
+      "id": "protests",
+      "query": "NYC protests demonstrations rallies this week breaking",
+      "description": "Test ability to find current/upcoming protests",
+      "expected_characteristics": {
+        "event_types": ["protest", "demonstration", "rally"],
+        "sources_quality": ["twitter", "news", "activist"],
+        "time_range": "current week"
+      },
+      "success_criteria": {
+        "min_relevant_results": 2,
+        "max_facebook_ratio": 0.2,
+        "should_find": ["protest location", "cause", "organizers"]
+      }
+    },
+    {
+      "id": "un_events",
+      "query": "UN Security Council General Assembly meetings schedule NYC 2025",
+      "description": "Test ability to find UN diplomatic events",
+      "expected_characteristics": {
+        "event_types": ["diplomatic", "political", "international"],
+        "sources_quality": ["un.org", "state.gov", "news"],
+        "time_range": "scheduled"
+      },
+      "success_criteria": {
+        "min_relevant_results": 2,
+        "max_facebook_ratio": 0.1,
+        "should_find": ["meeting topics", "participating nations", "dates"]
+      }
+    },
+    {
+      "id": "political",
+      "query": "Mayor NYC press conference town hall City Council meeting schedule",
+      "description": "Test ability to find local political events",
+      "expected_characteristics": {
+        "event_types": ["political", "government", "civic"],
+        "sources_quality": ["nyc.gov", "news", "official"],
+        "time_range": "next two weeks"
+      },
+      "success_criteria": {
+        "min_relevant_results": 2,
+        "max_facebook_ratio": 0.2,
+        "should_find": ["venue", "topics", "officials attending"]
+      }
+    },
+    {
+      "id": "cultural",
+      "query": "Met Gala Fashion Week museum opening NYC major cultural events 2025",
+      "description": "Test ability to find high-profile cultural events",
+      "expected_characteristics": {
+        "event_types": ["cultural", "fashion", "arts"],
+        "sources_quality": ["news", "official", "industry"],
+        "time_range": "scheduled"
+      },
+      "success_criteria": {
+        "min_relevant_results": 3,
+        "max_facebook_ratio": 0.3,
+        "should_find": ["venue", "date", "exclusive/public access info"]
+      }
+    }
+  ]
+}

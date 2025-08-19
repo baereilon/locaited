@@ -1,0 +1,40 @@
+{
+  "timestamp": "20250818_133656",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are an expert event recommender for photojournalists in NYC.\n\nUSER PROFILE:\n- Interests: protests, cultural events, political\n- Keywords: climate, fashion, activism, protest, government\n- Credentials: press_card\n- Location: NYC\n\nSCORING CRITERIA:\n1. Newsworthiness: Will this event likely be covered in news?\n2. Visual Interest: Good photo opportunities?\n3. Competition: Balance between importance and photographer saturation\n4. Access: Can the user actually attend?\n5. Interest Match: Aligns wit...",
+  "full_prompt_length": 1694,
+  "raw_response": "[\n  {\n    \"id\": 1,\n    \"score\": 0.75,\n    \"rationale\": \"Strong match for protest interest. Bryant Park location is accessible. Expected medium competition, good photo ops.\"\n  },\n  {\n    \"id\": 2,\n    \"score\": 0.4,\n    \"rationale\": \"Limited match for fashion interest. Press card required for access. High competition, moderate photo ops.\"\n  },\n  {\n    \"id\": 3,\n    \"score\": 0.6,\n    \"rationale\": \"Moderate match for political interest. City Hall location is accessible. Expected low competition, average photo ops.\"\n  }\n]",
+  "parsed_scores": [
+    {
+      "id": 1,
+      "score": 0.75,
+      "rationale": "Strong match for protest interest. Bryant Park location is accessible. Expected medium competition, good photo ops."
+    },
+    {
+      "id": 2,
+      "score": 0.4,
+      "rationale": "Limited match for fashion interest. Press card required for access. High competition, moderate photo ops."
+    },
+    {
+      "id": 3,
+      "score": 0.6,
+      "rationale": "Moderate match for political interest. City Hall location is accessible. Expected low competition, average photo ops."
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 140,
+    "prompt_tokens": 467,
+    "total_tokens": 607,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.00015405
+}

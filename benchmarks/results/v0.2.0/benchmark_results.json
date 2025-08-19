@@ -1,0 +1,286 @@
+{
+  "version": "0.2.0",
+  "timestamp": "2025-08-18T17:38:59.277459",
+  "test_results": {
+    "parades": {
+      "query": "NYC parades Dominican Day Israeli Day Puerto Rican Pride Parade schedule 2025",
+      "unique_events_count": 10,
+      "total_results": 25,
+      "events_with_basic_info": 2,
+      "sample_events": [
+        {
+          "title": "NYC events in June 2025 - Time Out",
+          "url": "https://www.timeout.com/newyork/events-calendar/june-events-calendar",
+          "snippet": "Giant puppets, reggaeton bands, salsa dancers, and floats will take over Fifth Avenue in Manhattan this Sunday for the National Puerto Rican Day Parade. More than a million people typically participate in and attend the parade, making it the largest demonstration of cultural pride in the nation. An iconic institution for over half a century, the parade seeks to raise awareness of Puerto Rican culture and history and highlight the community\u2019s contributions to the world. [...] The parade is on Sun",
+          "date": "Sunday",
+          "location": "Manhattan",
+          "access": "",
+          "has_basic_info": true
+        },
+        {
+          "title": "Puerto Rican Day Parade in NYC: Everything you need to know",
+          "url": "https://www.timeout.com/newyork/news/puerto-rican-day-parade-in-nyc-what-you-need-to-know-060818",
+          "snippet": "## When is the National Puerto Rican Day Parade in New York?\n\nThe parade is on Sunday, June 8, 2025, and kicks off at 11am.\n\n## What is the parade route?\n\nThe parade route typically marches along Fifth Avenue from 44th Street to 79th Street in Manhattan.\n\n## What's the theme this year? [...] Six-time GRAMMY\u00ae winner Olga Ta\u00f1\u00f3n will be honored as Queen of the 2025 Parade celebration. With more than 23 albums and a catalog of over 250 hit songs, Ta\u00f1\u00f3n remains an undisputed figure in Latin music. Ac",
+          "date": "June 8, 2025",
+          "location": "Manhattan",
+          "access": "",
+          "has_basic_info": true
+        },
+        {
+          "title": "[PDF] PARADES AND FESTIVALS IN MANHATTAN - NYC.gov",
+          "url": "https://www.nyc.gov/assets/cecm/downloads/pdf/manhattan-parades-street-closures-2025.pdf",
+          "snippet": "PARADES AND FESTIVALS IN MANHATTAN MAY 17-18, 2025 NOTICE REGARDING CHANGES TO NORMAL OPERATIONS IN YOUR AREA The City of New York provides as much information as possible to ensure that residents and business owners of affected areas are informed about interruptions to normal operations. Please be aware that there will be parades and festivals in Manhattan on the weekend of May 17-18, 2025. Please review the list of closures and restrictions below and note that all information is subject to [..",
+          "date": "",
+          "location": "Manhattan",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "March with the Public Advocate at the National Dominican Day ...",
+          "url": "https://www.eventbrite.com/e/march-with-the-public-advocate-at-the-national-dominican-day-parade-tickets-1478815349519",
+          "snippet": "# March with the Public Advocate at the National Dominican Day Parade!\n\n## Follow this organizer to stay informed on future events\n\n## Events you might like\n\nMarch with the Public Advocate and NYC Comptroller at Carnival!\n\n### March with the Public Advocate and NYC Comptroller at Carnival! March with the Public Advocate and NYC Comptroller at Carnival!\n\nDOMINICAN CULTURAL PARADE AND FESTIVAL OF ESSEX COUNTY 2025 [...] ### DOMINICAN CULTURAL PARADE AND FESTIVAL OF ESSEX COUNTY 2025 DOMINICAN CULT",
+          "date": "",
+          "location": "NYC",
+          "access": "public",
+          "has_basic_info": false
+        },
+        {
+          "title": "Dominican Parade official after parade hosted by DR FESTIVAL",
+          "url": "https://www.eventbrite.com/e/dominican-parade-official-after-parade-hosted-by-dr-festival-tickets-1558014937619",
+          "snippet": "# Dominican Parade official after parade hosted by DR FESTIVAL\n\n## Follow this organizer to stay informed on future events\n\n## Events you might like\n\nDOMINICAN CULTURAL PARADE AND FESTIVAL OF ESSEX COUNTY 2025\n\n### DOMINICAN CULTURAL PARADE AND FESTIVAL OF ESSEX COUNTY 2025 DOMINICAN CULTURAL PARADE AND FESTIVAL OF ESSEX COUNTY 2025\n\nDominican Parade of Essex  22nd Annual  Gala Banquet!\n\n### Dominican Parade of Essex 22nd Annual Gala Banquet! Dominican Parade of Essex 22nd Annual Gala Banquet! [",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "protests": {
+      "query": "NYC protests demonstrations rallies this week breaking",
+      "unique_events_count": 10,
+      "total_results": 20,
+      "events_with_basic_info": 1,
+      "sample_events": [
+        {
+          "title": "Angry protesters assail Trump, Musk in 'Hands Off!' rallies across US",
+          "url": "https://apnews.com/article/trump-musk-doge-protests-hands-off-472c574303260cbac315367cc808960d",
+          "snippet": "Protestors shout slogans as they march during a \u201cHands Off!\u201d protest against President Donald Trump on Saturday, April 5, 2025, in New York.",
+          "date": "April 5, 2025",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Protesters in cities across the US rally against Trump's policies ...",
+          "url": "https://apnews.com/article/50501-protests-project-2025-trump-state-capitols-ddd341171a54ba9b498cbfe7530e18ab",
+          "snippet": "Demonstrators raise signs during a protest outside City Hall, Wednesday, Feb. 5, 2025, in New York. (AP Photo/Yuki Iwamura). Read More.",
+          "date": "Wednesday",
+          "location": "City Hall",
+          "access": "",
+          "has_basic_info": true
+        },
+        {
+          "title": "Thousands of protesters rally against Trump across US | Reuters",
+          "url": "https://www.reuters.com/world/us/thousands-protesters-rally-against-trump-across-us-2025-04-19/",
+          "snippet": "Thousands of protesters rally against Trump across US. By Kanishka Singh. April 20, 20253:40 AM PDTUpdated April 20, 2025.",
+          "date": "April 20, 2025",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Anti-Trump protesters rally in New York, Washington and ... - AP News",
+          "url": "https://apnews.com/article/trump-protests-hands-off-revolutionary-war-anniversary-34218e384bef12bdf3a75a40959f4ede",
+          "snippet": "And in Manhattan, protesters rallied against continued deportations of immigrants as they marched from the New York Public Library north toward",
+          "date": "",
+          "location": "Manhattan",
+          "access": "public",
+          "has_basic_info": false
+        },
+        {
+          "title": "PRO_NYC (@protest_nyc) / X",
+          "url": "https://twitter.com/protest_nyc",
+          "snippet": "Protesters staging a die-in at Trump Tower against the Big Beautiful Bill, with chants against healthcare cuts as well as ICE.",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "un_events": {
+      "query": "UN Security Council General Assembly meetings schedule NYC 2025",
+      "unique_events_count": 10,
+      "total_results": 30,
+      "events_with_basic_info": 0,
+      "sample_events": [
+        {
+          "title": "Conference Search | Department for General Assembly and ...",
+          "url": "https://www.un.org/calendar/en/conferences?uw_search_aggregated_title=&uw_conf_date%5Bmin%5D=&uw_conf_date%5Bmax%5D=&end_value%5Bmin%5D=&end_value%5Bmax%5D=&uw_location&order=uw_calendar_conference_to_date_1&sort=desc&page=1",
+          "snippet": "| Committee on the Exercise of the Inalienable Rights of the Palestinian People, Special meeting in observance of the International Day of Solidarity with the Palestinian People (To be confirmed) | New York | 25 Nov 2025 | 25 Nov 2025 |\n| General Assembly, High-level meeting on the appraisal of the United Nations Global Plan of Action to Combat Trafficking in Persons | New York | 24 Nov 2025 | 25 Nov 2025 | [...] | General Assembly, First Committee, Eightieth session (To be confirmed) | New York",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "By Venue | Department for General Assembly ... - the United Nations",
+          "url": "https://www.un.org/calendar/en/venue",
+          "snippet": "| General Assembly, General debate, eightieth session (To be confirmed) | New York | 23 Sep 2025 | 29 Sep 2025 |\n| General Assembly, High level meeting on the prevention and control of noncommunicable diseases and the promotion of mental health and well-being | New York | 25 Sep 2025 | 25 Sep 2025 |\n| General Assembly, high-level meeting to commemorate the thirtieth anniversary of the World Programme of Action for Youth | New York | 25 Sep 2025 | 25 Sep 2025 | [...] | Meeting title   Sort by col",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Security Council - Meetings Coverage and Press Releases",
+          "url": "https://press.un.org/en/content/security-council",
+          "snippet": "On 8 August 2025, the members of the Security Council Committee established pursuant to resolution 1518 (2003) met with Dr. Ammar Ibrahim, Deputy Governor of the Central Bank and Chairman of the Iraqi National Committee for Freezing Terrorist Assets, as well as other members of the Iraqi National Committee, who visited New York from Baghdad.\n\n### LIVE - Security Council\n\nLive coverage of the United Nations Security Council [...] ### Security Council Committee Established Pursuant to Resolution 2",
+          "date": "",
+          "location": "NYC",
+          "access": "press",
+          "has_basic_info": false
+        },
+        {
+          "title": "High-Level Plenary Meeting of the General Assembly to ... - Indico",
+          "url": "https://indico.un.org/event/1019310/",
+          "snippet": "Welcome to the registration for Representatives from Specially Accredited Organizations to the one-day the one-day high-level plenary meeting to commemorate the thirtieth anniversary of the World Programme of Action on Youth. The High Level meeting is to be convened by the President of the General Assembly and shall be held at United Nations Headquarters in New York on 25 September 2025 during the general debate of the Assembly at its eightieth session, from 9 a.m. to 5.30 p.m., and shall [...] ",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "[PDF] Calendar of meetings for 2025 - the United Nations",
+          "url": "https://www.un.org/depts/los/reference_files/CalendarMeetingsDOALOSwebsite.pdf",
+          "snippet": "Dates Meeting 3 \u2013 14 March 2025 17 \u2013 28 March 2025 23 June \u2013 4 July 2025 2 \u2013 4 July 2025 7 \u2013 18 July 2025 21 July \u2013 25 July 2025 Legal and Technical Commission \u2013 first part Council \u2013 first part Legal and Technical Commission \u2013 second part Finance Committee \u2013 second part Council \u2013 second part Assembly \u2013 second part For more information or for any changes, please see: [...] Calendar of meetings for 2025 UNITED NATIONS HEADQUARTERS | INTERNATIONAL SEABED AUTHORITY Dates Meeting 17 Feb to 21 March C",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "political": {
+      "query": "Mayor NYC press conference town hall City Council meeting schedule",
+      "unique_events_count": 10,
+      "total_results": 16,
+      "events_with_basic_info": 1,
+      "sample_events": [
+        {
+          "title": "NYC DOT - Press Releases",
+          "url": "https://www.nyc.gov/html/dot/html/about/pr_main.shtml",
+          "snippet": "### Mayor Adams Announces Department of Sustainable Delivery to Boost Street Safety, Hold Delivery App Companies Accountable; Renews Calls on City Council to Pass Critical Legislation\n\n### Accessible Streets: NYC DOT Expands Bus Stop Accessibility Upgrades and Accessible Pedestrian Signals\n\n## July 3, 2025\n\n### NYC DOT Celebrates Transformation of Astoria\u2019s 31st Avenue Into Bike Boulevard, Enhancing Safety With Expanded Pedestrian Space and Bike Connections\n\n## July 2, 2025 [...] ### Mayor Adams",
+          "date": "July 3, 2025",
+          "location": "NYC",
+          "access": "press",
+          "has_basic_info": false
+        },
+        {
+          "title": "UPDATED PUBLIC SCHEDULE FOR MAYOR ERIC ADAMS FOR ...",
+          "url": "https://a860-gpp.nyc.gov/concern/nyc_government_publications/p5547w78k?locale=en",
+          "snippet": "NYC.gov logo\n\nDepartment of Records Logo\n\n# NYC Government Publication\n\n## UPDATED PUBLIC SCHEDULE FOR MAYOR ERIC ADAMS FOR MONDAY, JUNE 9, 2025\n\n## Downloadable Content\n\nDownload file\n\nThe Mayor's Press Office releases information about notable events and actions taken by the Mayor, as well as transcripts of all media conferences, radio shows, and ceremonies that the Mayor attends.\n\n## Items [...] | Thumbnail | Title | Date Uploaded | Actions |\n| --- | --- | --- | --- |\n|  | Mayor\\_s\\_Press\\_Of",
+          "date": "JUNE 9, 2025",
+          "location": "NYC",
+          "access": "press",
+          "has_basic_info": false
+        },
+        {
+          "title": "The New York City Council - Calendar - NYC.gov",
+          "url": "https://legistar.council.nyc.gov/Calendar.aspx?Mode=Today",
+          "snippet": "|  |  |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- | --- |\n| Title and navigation  | Title and navigation | | --- | | << | < | August 2025 | > | << | |\n| August 2025  |  | S | M | T | W | T | F | S | | --- | --- | --- | --- | --- | --- | --- | --- | | 31 | 27 | 28 | 29 | 30 | 31 | 1 | 2 | | 32 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | | 33 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | | 34 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | | 35 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | | 36 | 31 | 1 | 2 | 3 | 4 | 5 | 6 | | [..",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Releases & Advisories - PEU - NYC.gov",
+          "url": "https://www.nyc.gov/site/mayorspeu/news/releases-advisories.page",
+          "snippet": "NYC\n\nMayor's Public Engagement Unit\nLanguage\nPrint icon\n\n# Banner with a newspaper background Releases & Advisories\n\nBanner with a newspaper background\n\n## 2025\n\nCity Distributes Tenant Bill of Rights Toolkit to Bridge Knowledge Gaps \u2013 June 23, 2025\n\nCITY LAUNCHES DAY OF ACTION TO BOOST AWARENESS OF EARNED INCOME TAX CREDIT BENEFIT \u2013 March 21, 2025\n\nClick a topic, or press the enter key on a topic, to reveal its answer.\n\n2024 [...] Mayor Adams Calls for Additional Emergency Federal Aid for Emerg",
+          "date": "June 23, 2025",
+          "location": "NYC",
+          "access": "press",
+          "has_basic_info": false
+        },
+        {
+          "title": "NYC Mayor's Office of Media and Entertainment Announces Spring ...",
+          "url": "https://www.nyc.gov/site/mome/news/02042025-made-in-ny-talks.page",
+          "snippet": "NYC\n\nMayor's Office of Media and Entertainment\nLanguage\n\n# Press Releases\n\nPrint icon\n\n# NYC Mayor's Office of Media and Entertainment Announces Spring 2025 \"Made in NY\" Talks\n\nSignature Series with Focus on Job Opportunities for New Yorkers Returns; Full Schedule Available at [...] NEW YORK - The NYC Mayor's Office of Media and Entertainment (MOME) is pleased to announce the Spring 2025 schedule for the \"Made in NY\" Talks series. Presented in partnership with the Center for Communication, the s",
+          "date": "",
+          "location": "NYC",
+          "access": "press",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    },
+    "cultural": {
+      "query": "Met Gala Fashion Week museum opening NYC major cultural events 2025",
+      "unique_events_count": 10,
+      "total_results": 16,
+      "events_with_basic_info": 0,
+      "sample_events": [
+        {
+          "title": "Met Gala 2025: As it happened - BBC News",
+          "url": "https://www.bbc.com/news/live/c77nn7npmk8t",
+          "snippet": "This year's theme for the Metropolitan Museum of Art's fundraiser in New York city is \"Superfine: Tailoring Black Style\".",
+          "date": "",
+          "location": "Metropolitan Museum",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "Met Gala 2025: Highlights from exhibit of Black style and designers",
+          "url": "https://apnews.com/article/met-gala-exhibit-dandyism-black-style-8dc817659e9750b7e4e245139f5478da",
+          "snippet": "After Met Gala guests get a sneak preview on Monday night, the show opens to the public May 10.",
+          "date": "Monday",
+          "location": "",
+          "access": "public",
+          "has_basic_info": false
+        },
+        {
+          "title": "Met Gala 2025: What's the theme, how to watch and how ... - BBC",
+          "url": "https://www.bbc.com/news/articles/c3r807j7xrwo",
+          "snippet": "The biggest names in entertainment are gearing up to celebrate menswear and black style at Monday's Met Gala, the fashion industry's biggest night of the year.",
+          "date": "Monday",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "27 of the best looks from Met Gala 2025 - BBC",
+          "url": "https://www.bbc.com/news/articles/c20xvd10xv5o",
+          "snippet": "The theme for this year's event was \"Superfine: Tailoring Black Style\", the first since 2003 to focus exclusively on menswear.",
+          "date": "",
+          "location": "",
+          "access": "",
+          "has_basic_info": false
+        },
+        {
+          "title": "The Best NYC Events in January 2025 Right Now - Time Out",
+          "url": "https://www.timeout.com/newyork/events-calendar/january-events-calendar",
+          "snippet": "From new museum exhibits to celebrating Martin Luther King Day, check out these events and more sensational things to do in the winter.",
+          "date": "",
+          "location": "NYC",
+          "access": "",
+          "has_basic_info": false
+        }
+      ],
+      "api_cost": 0.01
+    }
+  },
+  "overall_metrics": {
+    "total_unique_events": 50,
+    "avg_unique_events_per_query": 10.0,
+    "total_results": 107,
+    "avg_results_per_query": 21.4,
+    "total_events_with_basic_info": 4,
+    "pct_with_basic_info": 8.0,
+    "pending_validation": 50,
+    "total_api_cost": 0.05
+  }
+}

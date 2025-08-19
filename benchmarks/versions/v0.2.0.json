@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "timestamp": "2025-08-18T17:38:24.726151",
+  "description": "Improved search with domain filtering and query optimization",
+  "changes": [
+    "Exclude Facebook from results",
+    "Add official sources (UN, White House, NYC gov)",
+    "Improved query construction with site: operators",
+    "Advanced search depth for scheduled events"
+  ],
+  "git_commit": "no-git",
+  "config": {
+    "domains": [
+      "un.org",
+      "facebook.com",
+      "eventbrite.com",
+      "whitehouse.gov",
+      "bbc.com",
+      "twitter.com",
+      "timeout.com",
+      "state.gov",
+      "apnews.com",
+      "reuters.com"
+    ],
+    "keywords": [
+      "march",
+      "press",
+      "parade",
+      "festival",
+      "protest",
+      "conference",
+      "demonstration",
+      "gala",
+      "council",
+      "rally"
+    ],
+    "search_depth": "basic",
+    "max_results": 10,
+    "excluded_domains": [],
+    "use_cache": false
+  }
+}

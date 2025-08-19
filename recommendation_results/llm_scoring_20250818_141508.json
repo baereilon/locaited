@@ -1,0 +1,35 @@
+{
+  "timestamp": "20250818_141508",
+  "model": "gpt-3.5-turbo",
+  "prompt_preview": "You are an expert event recommender for photojournalists in NYC.\n\nUSER PROFILE:\n- Interests: Cultural Event, Political event, News\n- Keywords: 2025, Brooklyn, Manhattan, NYC, New York, activism, breaking news, cultural, election, festival\n- Credentials: press_card\n- Location: NYC\n\nSCORING CRITERIA:\n1. Newsworthiness: Will this event likely be covered in news?\n2. Visual Interest: Good photo opportunities?\n3. Competition: Balance between importance and photographer saturation\n4. Access: Can the us...",
+  "full_prompt_length": 1611,
+  "raw_response": "[\n  {\n    \"id\": 1,\n    \"score\": 0.75,\n    \"rationale\": \"Strong match for protest interest. Nationwide mobilization on June 14, 2025. Potential breaking news. Visuals of activism. Access via Facebook. Moderate competition.\"\n  },\n  {\n    \"id\": 2,\n    \"score\": 0.2,\n    \"rationale\": \"Limited information provided. Unknown location, time, and details. Uncertain newsworthiness and visual interest. Low competition expected.\"\n  }\n]",
+  "parsed_scores": [
+    {
+      "id": 1,
+      "score": 0.75,
+      "rationale": "Strong match for protest interest. Nationwide mobilization on June 14, 2025. Potential breaking news. Visuals of activism. Access via Facebook. Moderate competition."
+    },
+    {
+      "id": 2,
+      "score": 0.2,
+      "rationale": "Limited information provided. Unknown location, time, and details. Uncertain newsworthiness and visual interest. Low competition expected."
+    }
+  ],
+  "token_usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 436,
+    "total_tokens": 549,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "estimated_cost": 0.00013319999999999999
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250818_135358",
+  "url": "https://www.facebook.com/groups/1077620615994293/posts/2264439143979095/",
+  "response": {
+    "results": [],
+    "failed_results": [
+      {
+        "url": "https://www.facebook.com/groups/1077620615994293/posts/2264439143979095/",
+        "error": "Access denied: Unable to retrieve content from the specified URL"
+      }
+    ],
+    "response_time": 0.05,
+    "request_id": "d3f7d087-a98c-412e-ac47-66cc5760bc45"
+  },
+  "cost": 0.01
+}

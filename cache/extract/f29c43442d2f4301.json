@@ -1,0 +1,9 @@
+{
+  "url": "http://example.com/event",
+  "timestamp": "2025-08-18T14:06:00.325389",
+  "extracted": {
+    "title": "Test Event",
+    "location": "NYC",
+    "time": "2025-01-01"
+  }
+}

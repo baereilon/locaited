@@ -1,0 +1,31 @@
+{
+  "timestamp": "20250818_135358",
+  "total_events": 2,
+  "total_cost": 0.02,
+  "events": [
+    {
+      "title": "Unknown Event",
+      "time": null,
+      "location": "NYC",
+      "organizer": "Unknown",
+      "url": "https://www.facebook.com/groups/50501movement/posts/1036718374732158/",
+      "access_req": "unknown",
+      "summary": "",
+      "raw_text": "",
+      "candidate_score": 0.644248,
+      "candidate_title": "No Kings Day Protests Against Trump's Military Parade - Facebook"
+    },
+    {
+      "title": "Unknown Event",
+      "time": null,
+      "location": "NYC",
+      "organizer": "Unknown",
+      "url": "https://www.facebook.com/groups/1077620615994293/posts/2264439143979095/",
+      "access_req": "unknown",
+      "summary": "",
+      "raw_text": "",
+      "candidate_score": 0.54317886,
+      "candidate_title": "Reminder: June 14, 2025 (This Saturday): NO KINGS: Nationwide ..."
+    }
+  ]
+}

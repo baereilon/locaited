@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "timestamp": "2025-08-18T15:19:41.500394",
+  "description": "Baseline version - current implementation",
+  "changes": [
+    "Basic Tavily search",
+    "No domain filtering",
+    "No Facebook exclusion",
+    "Simple query construction"
+  ],
+  "git_commit": "no-git",
+  "config": {
+    "domains": [
+      "50501.network",
+      "bbc.com",
+      "bryantpark.org",
+      "change.org",
+      "cnn.com",
+      "eventbrite.com",
+      "facebook.com",
+      "instagram.com",
+      "meetup.com",
+      "metmuseum.org"
+    ],
+    "keywords": [
+      "2025",
+      "Brooklyn",
+      "Manhattan",
+      "NYC",
+      "New York",
+      "activism",
+      "breaking news",
+      "cultural",
+      "election",
+      "festival"
+    ],
+    "search_depth": "basic",
+    "max_results": 10,
+    "excluded_domains": [],
+    "use_cache": false
+  }
+}
