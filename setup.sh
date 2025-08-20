@@ -1,33 +1,78 @@
 #!/bin/bash
 
-# Setup script for LocAIted project with micromamba
+# LocAIted Setup Script v0.4.0
+set -e  # Exit on error
 
-echo "Setting up LocAIted environment with micromamba..."
+echo "======================================"
+echo "   LocAIted Setup Script v0.4.0      "
+echo "======================================"
+echo ""
 
-# Check if micromamba is installed
-if ! command -v micromamba &> /dev/null; then
-    echo "Error: micromamba is not installed. Please install it first:"
-    echo "  brew install micromamba (on macOS)"
-    echo "  or visit: https://mamba.readthedocs.io/en/latest/installation.html"
+# 1. Check prerequisites
+echo "Checking prerequisites..."
+
+# Check Python
+if ! python3 --version | grep -q "3.1[1-9]"; then
+    echo "❌ Python 3.11+ required. Please install it first."
     exit 1
 fi
+echo "✅ Python 3.11+ found"
 
-# Create the environment
-echo "Creating micromamba environment 'locaited'..."
-micromamba create -f environment.yml -y
+# Check Micromamba
+if ! command -v micromamba &> /dev/null; then
+    echo "❌ Micromamba not found. Please install it first:"
+    echo "   curl -L micro.mamba.pm/install.sh | bash"
+    echo "   Then restart your terminal and run this script again."
+    exit 1
+fi
+echo "✅ Micromamba found"
 
-# Activate and show instructions
+# 2. Create/update environment
 echo ""
-echo "✅ Environment created successfully!"
+echo "Setting up environment..."
+if micromamba env list | grep -q "^locaited "; then
+    echo "Updating existing environment..."
+    micromamba env update -n locaited -f environment.yml
+else
+    echo "Creating new environment..."
+    micromamba create -f environment.yml -y
+fi
+
+# 3. Set up configuration
 echo ""
-echo "To activate the environment, run:"
-echo "  micromamba activate locaited"
+echo "Setting up configuration..."
+if [ ! -f .env.secret ]; then
+    cp .env.example .env.secret
+    echo "📝 Created .env.secret - Please add your API keys"
+    API_KEYS_NEEDED=true
+else
+    echo "✅ .env.secret exists"
+fi
+
+# 4. Create directories
+mkdir -p cache/v0.4.0/{researcher,fact_checker,publisher}
+echo "✅ Cache directories created"
+
+# 5. Run validation
 echo ""
-echo "For VS Code:"
-echo "  1. Open Command Palette (Cmd+Shift+P)"
-echo "  2. Select 'Python: Select Interpreter'"
-echo "  3. Choose the 'locaited' environment"
+echo "Validating installation..."
+micromamba run -n locaited python setup_validate.py
+
 echo ""
-echo "Next steps:"
-echo "  1. Copy your API keys to .env file"
-echo "  2. Run: python main.py"
+echo "======================================"
+echo "   Setup Complete!                   "
+echo "======================================"
+echo ""
+
+if [ "$API_KEYS_NEEDED" = true ]; then
+    echo "⚠️  ACTION REQUIRED:"
+    echo "   Edit .env.secret and add your API keys:"
+    echo "   - OPENAI_API_KEY from https://platform.openai.com"
+    echo "   - TAVILY_API_KEY from https://tavily.com"
+    echo ""
+fi
+
+echo "To run LocAIted:"
+echo "  micromamba run -n locaited python test_single.py"
+echo ""
+echo "See README.md for more information."

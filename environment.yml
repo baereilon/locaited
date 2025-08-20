@@ -2,17 +2,41 @@ name: locaited
 channels:
   - conda-forge
   - defaults
+
 dependencies:
+  # Python version - lock to 3.11
   - python=3.11
+  
+  # Core dependencies available in conda-forge
   - pip
+  - pandas>=2.3
+  - numpy>=2.3
+  - python-dateutil>=2.9
+  - pyyaml>=6.0
+  - requests>=2.32
+  - sqlalchemy>=2.0
+  
+  # Development tools from conda-forge
+  - pytest>=7.0
+  - ipython>=9.0
+  - black>=23.0
+  
+  # Pip packages (not available in conda or need specific versions)
   - pip:
-    - langgraph>=0.2.0
-    - tavily-python>=0.3.0
-    - openai>=1.0.0
-    - python-dotenv>=1.0.0
-    - sqlalchemy>=2.0.0
-    - fastapi>=0.100.0
-    - uvicorn>=0.23.0
-    - pydantic>=2.0.0
-    - httpx>=0.24.0
-    - pandas>=2.0.0  # For CSV processing
+    # Core AI/ML dependencies
+    - openai>=1.99
+    - tavily-python>=0.7
+    - langgraph>=0.6
+    - langchain-core>=0.3
+    - langsmith>=0.4
+    
+    # Web framework
+    - fastapi>=0.116
+    - uvicorn>=0.35
+    - httpx>=0.28
+    - pydantic>=2.11
+    
+    # Development tools not in conda
+    - ruff>=0.1
+    
+    # Note: python-dotenv removed - not needed with Micromamba
