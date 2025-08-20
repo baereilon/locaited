@@ -1,189 +1,104 @@
-# LocAIted Project Context for Claude
+# Claude Context for LocAIted
 
-## Product Overview
-LocAIted is a multi-agent system that helps photojournalists discover newsworthy events in NYC. It automates the process of finding, verifying, and curating events that are worth photographing, saving journalists hours of manual research.
+## Critical Reminders
 
-## User Flow
-1. **User Input**: Photojournalist specifies interests (e.g., "protests and cultural events in Brooklyn this week")
-2. **Profile Building**: Editor creates a comprehensive search profile with guidance
-3. **Lead Generation**: Researcher generates 25+ specific event leads using LLM
-4. **Evidence Gathering**: Fact-Checker searches for evidence of each lead using Tavily
-5. **Event Extraction**: Publisher extracts concrete events from evidence
-6. **Quality Gate**: Publisher decides if enough quality events found (APPROVE) or need retry (RETRY)
-7. **Feedback Loop**: If RETRY, Editor adjusts strategy based on feedback
-8. **Final Output**: Curated list of 5-10 verified events with details (date, time, location, access requirements)
+### Execution
+- **ALWAYS** use `micromamba run -n locaited python` for any Python execution
+- Never use plain `python` - environment won't load properly
 
-## Agent Goals and Responsibilities
+### North Star Metrics (What We Measure)
+1. **# Interesting Events** - Manually assessed by user
+2. **# Events with Complete Info** - Must have title, date, TIME, location
+3. **# Duplicate Events** - Should be minimal after Publisher dedup
 
-### Editor Agent (LLM-based)
-- **Goal**: Understand user intent and create actionable search profiles
-- **LLM Calls**: 
-  - One call to build/refine profile based on user input and feedback
-  - Uses complete_json() to get structured profile
-- **Responsibilities**:
-  - Parse user input (location, timeframe, interests)
-  - Generate researcher guidance for better leads
-  - Handle Publisher feedback on retries
-  - Track iteration count (max 3 retries)
-- **Key Output**: Profile with location, interests, and specific researcher_guidance
+**CRITICAL**: Publisher must return ALL unique extracted events for validation, not just top 10 scored
 
-### Researcher Agent (LLM-based)
-- **Goal**: Generate specific, searchable event leads
-- **LLM Calls**:
-  - One call to generate 25 event leads
-  - Uses complete_json() to get structured event list
-- **Responsibilities**:
-  - Use LLM to generate 25 diverse event leads
-  - Create specific descriptions (not generic)
-  - Include searchable keywords and organizations
-  - Consider seasonal and current events context
-- **Key Output**: List of leads with descriptions, types, and search queries
+### Known Issues to Remember
+- **Times not extracting**: Publisher extracts dates but misses times from evidence
+- **Date constraints weak**: Researcher generates past events for future queries (June events for August "this week")
+- **Temperature**: gpt-4.1-mini ONLY supports 1.0, will error on any other value
+- **max_tokens**: Must use `max_completion_tokens` not `max_tokens` in API calls
 
-### Fact-Checker Agent (API-based, no LLM)
-- **Goal**: Find evidence for event leads while managing API costs
-- **External Calls**:
-  - Tavily API for web searches (5-8 searches max per run)
-  - No LLM calls - pure API wrapper
-- **Responsibilities**:
-  - Search for evidence using Tavily API
-  - Implement smart batching (5-8 searches max)
-  - Cache results to avoid duplicate searches
-  - Extract relevant information from search results
-- **Key Output**: Evidence list with search results and extracted answers
+## Development Principles
 
-### Publisher Agent (LLM-based)
-- **Goal**: Extract real events and ensure quality
-- **LLM Calls**:
-  - First call: Extract and deduplicate events from evidence
-  - Second call: Make gate decision and score events
-  - Both use complete_json() for structured output
-- **Responsibilities**:
-  - Extract concrete events from evidence using LLM
-  - Deduplicate similar events
-  - Score events (0-100) on photographic potential
-  - Make gate decision (APPROVE if 5+ quality events)
-  - Provide actionable feedback for retries
-- **Key Output**: Final events list or retry feedback
+### When Making Changes
+1. Test with `validate_workflow.py` - generates CSVs for manual review
+2. Check benchmarks/results/v0.4.0/ for outputs
+3. Small iterative changes with frequent testing
+4. If user says something is elegant/efficient, don't over-engineer
 
-## Core Development Principles
+### Cost Management
+- Tavily: ~$0.025 per workflow (25 searches)
+- OpenAI: ~$0.006 per workflow
+- Total target: <$0.05 per run
+- Cache aggressively - we have limited API credits
 
-### Budget Awareness
-- **Tavily API**: Limited credits, use caching aggressively
-- **OpenAI API**: Small cap, optimize prompts for efficiency
-- **Strategy**: Cache everything, batch operations, avoid redundant calls
-- **Cost tracking**: Every agent tracks and reports costs
+### LLM vs Code Solutions
+- **Use LLM for**: Text processing, extraction, decisions
+- **Use code for**: Routing, caching, file operations
+- When in doubt, prefer LLM solutions
 
-### Caching & Deduplication
-- **File-based caching**: Organized by version/agent/query
-- **Cache keys**: Based on location + timeframe
-- **Deduplication**: Publisher removes duplicate events
-- **Smart batching**: Fact-Checker limits searches to 5-8
+## Recent Decisions & Context
 
-### Benchmarking
-- **Test data**: "Liri Interesting events.csv" with pre-approved events
-- **Success metrics**: 
-  - Precision: How many found events are actually interesting?
-  - Recall: How many interesting events were found?
-  - Cost efficiency: Total API cost per successful run
+### Why Micromamba
+- Replaced venv due to repeated .env loading issues
+- Auto-loads .env.secret on activation
+- More reliable than pip venv
 
-### Iterative Development
-- **Small steps**: Test each agent individually first
-- **Frequent check-ins**: Run test_workflow_v4.py after each change
-- **Version control**: Clear v0.4.0 naming, git tags
-- **Debugging**: Comprehensive logging at each step
+### Publisher Output Limit
+- Limited to 15 events max to prevent JSON parsing errors
+- Was getting 24k+ tokens causing truncation
+- Gate decision based on top 10 scored events
 
-## Assessment Principles
-The project will be assessed based on:
+### Agent Tracking
+- Using Option 1: Best-effort matching with existing data
+- PRD-001 in docs/future/ for proper tracking implementation
+- No code changes needed for now
 
-### Functionality
-- Agents coordinate effectively through LangGraph
-- Retry logic works with feedback propagation
-- Events are successfully found and extracted
-- Gate decisions are reasonable and well-justified
+### File Organization
+- Consolidated test files to just 3: test_api_connection, test_workflow, benchmark_workflow
+- Validation outputs go in benchmarks/results/v0.4.0/
+- Using CSV format to match v0.3.0 for consistency
 
-### Code Quality
-- Clean, modular architecture
-- Proper error handling and logging
-- Consistent naming conventions
-- Effective use of inheritance (BaseAgent, CachedAgent)
-- Well-organized file structure
+## Gotchas to Avoid
 
-### Documentation & Demo
-- Clear README with setup instructions
-- Architecture diagrams and flow documentation
-- Easy installation process
-- Working demo with sample outputs
-- Comments where complex logic requires explanation
+### API Parameters
+- `complete_json()` for structured output, not `complete()`
+- Include `temperature=1.0` explicitly
+- Use `max_completion_tokens` not `max_tokens`
 
-## Technical Configuration
+### Testing
+- `validate_workflow.py` is the main validation tool
+- Outputs CSVs not JSON for manual review
+- Always check agent_outputs CSV for pipeline visibility
 
-### Environment Management
-**IMPORTANT**: Always use `micromamba run -n locaited` to execute Python scripts.
+### Git Hygiene
+- Don't create new test files - consolidate
+- Keep temporary files out of git
+- Update existing files rather than creating new ones
 
-```bash
-# Run tests
-micromamba run -n locaited python test_workflow_v4.py
+## What Each Agent Actually Does
 
-# Run any Python script
-micromamba run -n locaited python script.py
+### Editor
+- ONE LLM call to create profile
+- Handles retry feedback from Publisher
 
-# Install packages
-micromamba run -n locaited pip install package_name
-```
+### Researcher  
+- ONE LLM call to generate 25 leads
+- Should enforce date constraints (currently weak)
 
-### API Configuration
-- **Model**: gpt-4.1-mini (NOT gpt-5-mini or gpt-4o-mini)
-- **Temperature**: 1.0 (only supported value)
-- **Max tokens**: Use max_completion_tokens parameter
-- **API keys**: Stored in .env.secret (auto-loaded by micromamba)
+### Fact-Checker
+- NO LLM calls - pure Tavily API
+- Searches all 25 leads (not limited to 5-8 despite docs)
+- Heavy caching to avoid duplicate searches
 
-### Testing Commands
-```bash
-# Main workflow test
-micromamba run -n locaited python test_workflow_v4.py
+### Publisher
+- TWO LLM calls: extract events, then gate decision
+- Deduplicates and scores events
+- Returns max 15 to prevent JSON overflow
 
-# Individual agent tests (when available)
-micromamba run -n locaited python test_editor.py
-micromamba run -n locaited python test_researcher.py
-
-# Linting and type checking (to be added)
-micromamba run -n locaited ruff check .
-micromamba run -n locaited mypy .
-```
-
-## Key Files Structure
-```
-locaited/
-├── environment.yml          # Micromamba environment definition
-├── .env.secret             # API keys (gitignored)
-├── test_workflow_v4.py     # Main test script
-├── src/
-│   ├── agents/
-│   │   ├── base_agent.py      # Base classes with caching
-│   │   ├── editor_v4.py       # Profile builder (LLM-based)
-│   │   ├── researcher_v4.py   # Lead generator (LLM-based)
-│   │   ├── fact_checker_v4.py # Evidence gatherer (Tavily API)
-│   │   ├── publisher_v4.py    # Event extractor (LLM-based)
-│   │   └── workflow_v4.py     # LangGraph orchestration
-│   └── utils/
-│       ├── llm_client.py      # OpenAI wrapper with cost tracking
-│       └── tavily_client.py   # Tavily wrapper with caching
-└── cache/
-    └── v0.4.0/                # Version-specific cache
-        ├── researcher/
-        ├── fact_checker/
-        └── publisher/
-```
-
-## Current Status
-- v0.4.0 core implementation complete
-- Micromamba environment working
-- Model updated to gpt-4.1-mini
-- Testing workflow for end-to-end validation
-
-## Next Steps
-1. Complete workflow testing
-2. Add benchmark evaluation against test data
-3. Optimize API usage based on metrics
-4. Document setup process in README
-5. Create demo video/screenshots
+## Current State Notes
+- Test files cleaned up and consolidated
+- Config centralized in src/config.py
+- CSVs properly generated in benchmarks/results/v0.4.0/
+- Critical files now in git (validate_workflow.py, docs/)

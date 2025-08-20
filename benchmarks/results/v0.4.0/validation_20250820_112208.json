@@ -1,0 +1,163 @@
+{
+  "run_date": "2025-08-20T11:22:08.403617",
+  "query": {
+    "location": "New York City",
+    "time_frame": "next 2 weeks",
+    "interests": [
+      "protests",
+      "cultural events",
+      "political events",
+      "parades",
+      "art exhibitions"
+    ]
+  },
+  "summary": {
+    "total_events": 10,
+    "complete_info_count": 0,
+    "duration_seconds": 209.421562,
+    "total_cost": 0.030901900000000013,
+    "gate_decision": "APPROVE"
+  },
+  "events": [
+    {
+      "index": 1,
+      "title": "AfroPunk Festival 2025 featuring Black artists and cultural performances including BLKTOPIA launch party",
+      "date": "2025-08-22",
+      "time": null,
+      "location": "Barclays Center, Brooklyn, NY",
+      "description": "",
+      "score": 95,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "NYC Climate Strike advocating Green New Deal at Foley Square",
+      "date": "2025-08-23",
+      "time": null,
+      "location": "Foley Square, Manhattan, NY",
+      "description": "",
+      "score": 90,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "2025 New York City Democratic Mayoral Primary Debate",
+      "date": "2025-08-25",
+      "time": null,
+      "location": "The New School, Manhattan, NY",
+      "description": "",
+      "score": 88,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Harlem Week Summer Festival Jazz Concert Series featuring Ron Carter\u2019s Great Big Band and Branford Marsalis Quartet",
+      "date": "2025-08-22",
+      "time": null,
+      "location": "Marcus Garvey Park, Harlem, NYC",
+      "description": "",
+      "score": 87,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "9/11 Memorial & Museum special exhibition 'Witnessing 9/11: Photographs by NY Times Photographers' opening",
+      "date": "2025-08-27",
+      "time": null,
+      "location": "9/11 Memorial & Museum, World Trade Center, NYC",
+      "description": "",
+      "score": 85,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "NYC Housing Justice Rally protesting luxury development",
+      "date": "2025-08-26",
+      "time": null,
+      "location": "City Hall Park, Manhattan, NYC",
+      "description": "",
+      "score": 85,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "LGBTQ+ Pride Family Day with live performances and activities",
+      "date": "2025-08-24",
+      "time": null,
+      "location": "Hudson River Park Pier 26, NYC",
+      "description": "",
+      "score": 83,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Latin Jazz Festival at Prospect Park Bandshell",
+      "date": "2025-08-24",
+      "time": null,
+      "location": "Lena Horne Bandshell, Prospect Park, Brooklyn, NY",
+      "description": "",
+      "score": 82,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 9,
+      "title": "Stop Asian Hate Rally at Foley Square",
+      "date": "2025-08-29",
+      "time": null,
+      "location": "Foley Square, Manhattan, NYC",
+      "description": "",
+      "score": 80,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Brooklyn Anti-Gentrification Protest in Bedford-Stuyvesant",
+      "date": "2025-08-30",
+      "time": null,
+      "location": "Bedford-Stuyvesant neighborhood, Brooklyn, NY",
+      "description": "",
+      "score": 80,
+      "is_top_10": true,
+      "has_complete_info": false,
+      "missing_fields": [
+        "time"
+      ]
+    }
+  ]
+}

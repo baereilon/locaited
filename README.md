@@ -10,6 +10,18 @@ LocAIted uses a sophisticated pipeline of AI agents to:
 - Extract concrete event details from search results
 - Curate and score events based on photographic potential
 
+## Success Metrics (North Star)
+
+LocAIted's performance is measured by three critical metrics:
+
+1. **Number of Interesting Events**: How many genuinely newsworthy events are discovered
+2. **Number of Events with Basic Info**: How many events include ALL essential details:
+   - Clear event title
+   - Specific date
+   - Start time
+   - Precise location (enough to plan commute)
+3. **Number of Duplicate Events**: How effectively the system deduplicates similar events
+
 ### Key Features
 
 - **Smart Event Discovery**: LLM-powered lead generation tailored to photographer interests
@@ -240,6 +252,10 @@ import logging
 logging.basicConfig(level=logging.INFO)  # See detailed logs
 ```
 
+## Future Development
+
+See [Future Development Index](docs/future/INDEX.md) for planned features and enhancements.
+
 ## Contributing
 
 1. Fork the repository
@@ -248,6 +264,7 @@ logging.basicConfig(level=logging.INFO)  # See detailed logs
 4. Test thoroughly (`micromamba run -n locaited python test_workflow_v4.py`)
 5. Commit with clear messages
 6. Push and create a Pull Request
+7. For new features, consider adding a PRD in `docs/future/`
 
 ## License
 

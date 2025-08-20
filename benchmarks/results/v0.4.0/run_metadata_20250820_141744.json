@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-08-20T14:17:44.572776",
+  "query": {
+    "location": "New York City",
+    "time_frame": "next 2 weeks",
+    "interests": [
+      "protests",
+      "cultural events",
+      "political events",
+      "parades",
+      "art exhibitions"
+    ]
+  },
+  "duration_seconds": 209.405033,
+  "total_cost": 0.031197400000000014,
+  "gate_decision": "APPROVE",
+  "total_events": 10,
+  "events_with_complete_info": 0,
+  "events_with_time": 0,
+  "workflow_iterations": 1,
+  "files": {
+    "main_validation": "events_for_validation_0.4.0_20250820_141744.csv",
+    "agent_visibility": "agent_outputs_0.4.0_20250820_141744.csv"
+  }
+}
