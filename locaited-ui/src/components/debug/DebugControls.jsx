@@ -8,11 +8,12 @@ import {
 } from '@mui/icons-material';
 import useDebugStore from '../../stores/debugStore';
 
-const DebugControls = ({ onClose }) => {
+const DebugControls = ({ onClose, onComplete }) => {
   const { 
     currentAgent, 
     isProcessing, 
     isWaiting,
+    agentResults,
     continueToNextAgent,
     stopDebugSession 
   } = useDebugStore();
@@ -26,7 +27,26 @@ const DebugControls = ({ onClose }) => {
   };
 
   const handleContinue = () => {
-    continueToNextAgent();
+    if (isLastAgent && onComplete) {
+      // Complete debug session - extract final results
+      const debugResults = {
+        publisher: agentResults.publisher,
+        editor: agentResults.editor,
+        researcher: agentResults.researcher,
+        fact_checker: agentResults.fact_checker,
+        total_cost: Object.values(agentResults).reduce((sum, result) => sum + (result?.cost || 0), 0),
+        cache_hits: Object.values(agentResults).reduce((sum, result) => sum + (result?.cache_hits || 0), 0),
+        workflow_metrics: {
+          iterations: 1, // Debug mode is single iteration
+          agents_executed: Object.keys(agentResults).length
+        }
+      };
+      
+      stopDebugSession();
+      onComplete(debugResults);
+    } else {
+      continueToNextAgent();
+    }
   };
 
   const handleStop = () => {

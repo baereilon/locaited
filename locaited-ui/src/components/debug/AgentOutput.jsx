@@ -132,15 +132,42 @@ const AgentOutput = ({ agent, data }) => {
           Generated Leads (Preview)
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          {data.preview?.map((lead, index) => (
+          {(expandedSections.all_leads ? data.raw_data?.leads || [] : data.preview || []).map((lead, index) => (
             <Card key={index} variant="outlined">
               <CardContent sx={{ p: 2, '&:last-child': { pb: 2 } }}>
                 <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                  {lead.number}. {lead.description}
+                  {expandedSections.all_leads ? `${index + 1}. ${lead.description}` : `${lead.number}. ${lead.description}`}
                 </Typography>
                 <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
                   Type: <strong>{lead.type}</strong> | Keywords: {lead.keywords?.join(', ')}
                 </Typography>
+                {lead.date && lead.date !== "No date" && (
+                  <Typography variant="caption" color="primary.main" sx={{ mt: 0.5, display: 'block', fontWeight: 500 }}>
+                    📅 {lead.date} {lead.time && `at ${lead.time}`}
+                  </Typography>
+                )}
+                {lead.venue && (
+                  <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
+                    📍 {lead.venue}
+                  </Typography>
+                )}
+                {lead.source_url && (
+                  <Typography variant="caption" sx={{ mt: 0.5, display: 'block' }}>
+                    🔗 <a href={lead.source_url} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2' }}>
+                      Source URL
+                    </a>
+                  </Typography>
+                )}
+                {expandedSections.all_leads && lead.search_query && (
+                  <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
+                    Search Query: {lead.search_query}
+                  </Typography>
+                )}
+                {expandedSections.all_leads && lead.verification_note && (
+                  <Typography variant="caption" color="success.main" sx={{ mt: 0.5, display: 'block' }}>
+                    ✓ {lead.verification_note}
+                  </Typography>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -404,9 +431,6 @@ const AgentOutput = ({ agent, data }) => {
       </Box>
     </Box>
   );
-};
-
-export default AgentOutput;
 };
 
 export default AgentOutput;

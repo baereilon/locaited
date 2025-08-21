@@ -20,34 +20,17 @@ import AgentProgress from './debug/AgentProgress';
 import AgentOutput from './debug/AgentOutput';
 import DebugControls from './debug/DebugControls';
 
-const DebugModal = ({ isOpen, onClose }) => {
+const DebugModal = ({ isOpen, onClose, onComplete }) => {
   const { 
-    isDebugMode, 
     currentAgent, 
     agentResults, 
     error,
     stopDebugSession 
   } = useDebugStore();
 
-  // Close modal when debug session ends
-  useEffect(() => {
-    if (!isDebugMode && isOpen) {
-      onClose();
-    }
-  }, [isDebugMode, isOpen, onClose]);
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (isDebugMode) {
-        stopDebugSession();
-      }
-    };
-  }, []);
-
   return (
     <Dialog
-      open={isOpen && isDebugMode}
+      open={isOpen}
       onClose={onClose}
       maxWidth="lg"
       fullWidth
@@ -142,7 +125,7 @@ const DebugModal = ({ isOpen, onClose }) => {
 
             {/* Controls */}
             <Paper sx={{ p: 3, elevation: 1 }}>
-              <DebugControls onClose={onClose} />
+              <DebugControls onClose={onClose} onComplete={onComplete} />
             </Paper>
           </Box>
         )}

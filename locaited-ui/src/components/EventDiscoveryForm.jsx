@@ -28,6 +28,7 @@ import {
 } from '@mui/icons-material';
 import { LOCATIONS, CREDENTIALS, INTEREST_AREAS, TIME_WINDOWS } from '../config/constants';
 import DebugButton from './DebugButton';
+import useDebugStore from '../stores/debugStore';
 
 const EventDiscoveryForm = ({ onSubmit, onDebugSubmit, isLoading }) => {
   const [formData, setFormData] = useState({
@@ -41,6 +42,8 @@ const EventDiscoveryForm = ({ onSubmit, onDebugSubmit, isLoading }) => {
 
   const [errors, setErrors] = useState({});
   const [showCustomLocation, setShowCustomLocation] = useState(false);
+  
+  const { startCachePrompt } = useDebugStore();
 
   const validateForm = () => {
     const newErrors = {};
@@ -124,7 +127,9 @@ const EventDiscoveryForm = ({ onSubmit, onDebugSubmit, isLoading }) => {
   };
 
   const handleDebugSubmit = () => {
-    if (!validateForm()) return;
+    if (!validateForm()) {
+      return;
+    }
 
     const submissionData = {
       location: formData.location,
@@ -133,10 +138,10 @@ const EventDiscoveryForm = ({ onSubmit, onDebugSubmit, isLoading }) => {
       csv_file: null, // TODO: Handle CSV upload in debug mode
       days_ahead: formData.daysAhead,
       query: formData.query,
-      use_cache: true,
     };
 
-    onDebugSubmit(submissionData);
+    // Start cache preference prompt instead of direct submission
+    startCachePrompt(submissionData);
   };
 
   const handleClear = () => {

@@ -1,5 +1,44 @@
 # Claude Context for LocAIted
 
+## User Interface & Flow (v1.0)
+
+### Single-Flow Architecture
+**IMPORTANT**: The UI implements a single-flow design where users provide profile + query in one form submission.
+See `docs/USER-FLOW-V1.md` for complete specification.
+
+**Key Points:**
+- Endpoint: `POST /workflow/discover` (uses ExtendedSearchRequest)
+- No authentication or user persistence
+- TIME field is CRITICAL - must be extracted and displayed prominently
+- Returns max 15 events to prevent JSON overflow
+- Frontend at `locaited-ui/` built with React + Material-UI
+
+**Backend Must Preserve:**
+- All required fields (title, date, time, location)
+- Score range (0-100)
+- Access requirement values (public_only, press_pass, vip_access)
+- The `/workflow/discover` endpoint contract
+
+## AI Dev Tasks Protocol
+
+### Core Workflow for Development Tasks
+1. **PRD Creation** - Define feature scope, purpose, and requirements
+2. **Task List Generation** - Break PRD into granular, step-by-step tasks
+3. **Review & Approval** - Present tasks to user for approval BEFORE starting
+4. **Iterative Implementation** - One task at a time with verification
+
+### Key Principles
+- **Never start implementation without approval**
+- **Focus on one task at a time**
+- **Get feedback before moving to next task**
+- **Maintain clear checkpoints for verification**
+
+### Process Steps
+1. When user requests a feature → Create PRD
+2. After PRD approval → Generate detailed task list
+3. After task list approval → Begin implementation
+4. After each task → Verify and get approval for next
+
 ## Critical Reminders
 
 ### Execution
@@ -102,3 +141,6 @@
 - Config centralized in src/config.py
 - CSVs properly generated in benchmarks/results/v0.4.0/
 - Critical files now in git (validate_workflow.py, docs/)
+- Report back means I want you to share with what you plan on doing so I can approve it before you actually do it. eg Report back with a documenation of X means send me the proposed documentation to review before creating the actual file
+- Do not run to implement tasks/fixes without me telling you to do so
+- Do not add Claude signature to Git commits

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Container,
   Typography,
@@ -12,8 +12,10 @@ import EventDiscoveryForm from './components/EventDiscoveryForm';
 import StatusIndicator from './components/StatusIndicator';
 import ResultsContainer from './components/ResultsContainer';
 import DebugModal from './components/DebugModal';
+import CachePreferenceDialog from './components/debug/CachePreferenceDialog';
 import { discoverEvents, checkHealth } from './services/api';
 import useDebugSSE from './hooks/useDebugSSE';
+import useDebugStore from './stores/debugStore';
 
 // Create theme matching logo's blue gradient
 const theme = createTheme({
@@ -165,6 +167,21 @@ function App() {
   
   // Debug functionality
   const { startDebugRun } = useDebugSSE();
+  const { toggleDebugVisibility } = useDebugStore();
+
+  // Global keyboard shortcut handler for debug toggle
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Check for Cmd/Ctrl + Shift + X
+      if ((event.metaKey || event.ctrlKey) && event.shiftKey && (event.key === 'X' || event.key === 'x')) {
+        event.preventDefault();
+        toggleDebugVisibility();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [toggleDebugVisibility]);
 
   // Check API health on mount
   useEffect(() => {
@@ -239,6 +256,29 @@ function App() {
   };
 
   const handleDebugModalClose = () => {
+    setIsDebugModalOpen(false);
+  };
+
+  const handleDebugComplete = (debugResults) => {
+    // Extract events and metrics from debug results
+    const publisherData = debugResults.publisher;
+    if (publisherData && publisherData.decision === 'APPROVE') {
+      // Set events and metrics as if it was a successful standard run
+      setEvents(publisherData.events || []);
+      setMetrics({
+        events: publisherData.events || [],
+        total_cost: debugResults.total_cost || 0,
+        cache_hits: debugResults.cache_hits || 0,
+        status: 'success',
+        message: `Found ${publisherData.events?.length || 0} events via debug mode`,
+        workflow_metrics: debugResults.workflow_metrics || {}
+      });
+      setCurrentStep(5); // Set to completed step
+      setIsLoading(false);
+      setError(null);
+    }
+    
+    // Close debug modal
     setIsDebugModalOpen(false);
   };
 
@@ -340,7 +380,11 @@ function App() {
       <DebugModal 
         isOpen={isDebugModalOpen}
         onClose={handleDebugModalClose}
+        onComplete={handleDebugComplete}
       />
+      
+      {/* Cache Preference Dialog */}
+      <CachePreferenceDialog onDebugStart={() => setIsDebugModalOpen(true)} />
     </ThemeProvider>
   );
 }

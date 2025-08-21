@@ -2,14 +2,21 @@
 .env
 .env.local
 .env.secret
+!.env.example
+
+# Local development context
+CLAUDE.md
 
 # Micromamba
 .micromamba/
 micromamba/
+.mamba/
 
 # Virtual Environment
 venv/
 .venv/
+env/
+ENV/
 
 # Python
 __pycache__/
@@ -17,24 +24,41 @@ __pycache__/
 *$py.class
 *.so
 .Python
-venv/
-env/
-ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
+locaited.db
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
+.AppleDouble
+.LSOverride
 
 # Logs
 *.log
@@ -44,3 +68,58 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.hypothesis/
+*.cover
+coverage.xml
+
+# Project-specific cache and results
+cache/
+extraction_results/
+recommendation_results/
+user_flow_analysis_*/
+benchmark_simple_results.json
+benchmark_v4_proper.py
+test_results_*.json
+test_simple.py
+debug_*.py
+micromamba_implementation_prd.md
+v0.4.0_remaining_tasks.md
+
+# Notebooks (keep only essential ones)
+*.ipynb
+.ipynb_checkpoints/
+!examples/*.ipynb
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+dist/
+dist-ssr/
+*.local
+
+# Large data files (but keep test data)
+*.pkl
+benchmark_results_*.csv
+events_for_validation_*.csv
+agent_outputs_*.csv
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Generated reports
+reports/
+output/

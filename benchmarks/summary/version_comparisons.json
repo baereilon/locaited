@@ -1,0 +1,55 @@
+{
+  "v0.1.0_to_v0.2.0": {
+    "cost_change": 0.0,
+    "quality_change": -42.9,
+    "results_change": 52.9,
+    "key_improvements": [
+      "53% increase in search results coverage",
+      "Better result diversity"
+    ],
+    "regressions": [
+      "Info completeness dropped 43% (14% → 8%)"
+    ]
+  },
+  "v0.2.0_to_v0.3.0": {
+    "cost_change": 660.0,
+    "quality_change": 37.5,
+    "results_change": -30.0,
+    "key_improvements": [
+      "LLM-based orchestration added",
+      "Multi-agent pipeline implemented",
+      "Deduplication tracking (47.1% rate)"
+    ],
+    "regressions": [
+      "7.6x cost increase due to LLM calls",
+      "Fewer results per query"
+    ]
+  },
+  "v0.3.0_to_v0.4.0": {
+    "cost_change": -91.8,
+    "quality_change": 809.1,
+    "events_change": 5.3,
+    "key_improvements": [
+      "92% cost reduction through optimization",
+      "LangGraph architecture for better coordination",
+      "Quality-first approach with validation",
+      "Processing time under 4 minutes"
+    ],
+    "regressions": []
+  },
+  "overall_v0.1.0_to_v0.4.0": {
+    "cost_change": -38.0,
+    "quality_change": 614.3,
+    "architecture_evolution": [
+      "v0.1: Simple Tavily search",
+      "v0.2: Enhanced search coverage",
+      "v0.3: LLM orchestration added",
+      "v0.4: Multi-agent LangGraph pipeline"
+    ],
+    "major_achievements": [
+      "38% cost reduction while adding LLM capabilities",
+      "7x improvement in information quality",
+      "Fully automated validation workflow"
+    ]
+  }
+}

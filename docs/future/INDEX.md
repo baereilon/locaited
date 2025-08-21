@@ -8,7 +8,7 @@ This directory contains Product Requirement Documents (PRDs) for planned feature
 - [PRD-001: Enhanced Agent Tracking](prd_001_agent_tracking.md) - Add full traceability from leads to events
 
 ### Medium Priority
-- (Future PRDs will be added here)
+- [PRD-003: Credentials-Based Event Filtering](prd_003_credentials_filtering.md) - Filter events by user's access credentials
 
 ### Low Priority
 - (Future PRDs will be added here)

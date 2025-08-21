@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2025-08-18",
+      "git_commit": "initial",
+      "metrics": {
+        "avg_events_found": 10.0,
+        "avg_results_per_query": 14.0,
+        "info_completeness": 14.0,
+        "avg_cost": 0.05,
+        "total_unique_events": 50,
+        "queries_tested": 5
+      },
+      "improvements": [
+        "Initial implementation",
+        "Basic Tavily search integration",
+        "Event extraction from search results"
+      ],
+      "test_queries_used": ["parades", "protests", "un_events", "political", "cultural"],
+      "benchmark_file": "results/v0.1.0/benchmark_results.json"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2025-08-18",
+      "git_commit": "unknown",
+      "metrics": {
+        "avg_events_found": 10.0,
+        "avg_results_per_query": 21.4,
+        "info_completeness": 8.0,
+        "avg_cost": 0.05,
+        "total_unique_events": 50,
+        "total_results": 107,
+        "queries_tested": 5
+      },
+      "improvements": [
+        "Improved search coverage (53% more results)",
+        "Better result diversity",
+        "Enhanced deduplication"
+      ],
+      "regressions": [
+        "Info completeness dropped from 14% to 8%"
+      ],
+      "test_queries_used": ["parades", "protests", "un_events", "political", "cultural"],
+      "benchmark_file": "results/v0.2.0/benchmark_results.json"
+    },
+    {
+      "version": "0.3.0",
+      "date": "2025-08-19",
+      "git_commit": "83f2e2d",
+      "metrics": {
+        "avg_events_found": 9.5,
+        "avg_candidates": 18.5,
+        "info_completeness": 11.0,
+        "avg_cost": 0.38,
+        "dedup_rate": 47.1,
+        "pipeline_efficiency": 0.486,
+        "queries_tested": 2
+      },
+      "improvements": [
+        "Added LLM-based orchestration",
+        "Implemented multi-agent pipeline",
+        "Added deduplication metrics",
+        "Pipeline flow tracking"
+      ],
+      "regressions": [
+        "Cost increased 7.6x due to LLM usage",
+        "Partial test coverage (scoring errors)"
+      ],
+      "test_queries_used": ["parades", "protests"],
+      "benchmark_file": "results/v0.3.0/benchmark_results.json"
+    },
+    {
+      "version": "0.4.0",
+      "date": "2025-08-20",
+      "git_commit": "6701263",
+      "metrics": {
+        "avg_events_found": 10,
+        "info_completeness": 100,
+        "avg_cost": 0.031,
+        "total_events": 10,
+        "events_with_complete_info": 0,
+        "gate_decision": "APPROVE",
+        "workflow_iterations": 1,
+        "duration_seconds": 209.4
+      },
+      "improvements": [
+        "LangGraph multi-agent architecture",
+        "92% cost reduction from v0.3.0",
+        "Quality-focused approach",
+        "Validation and verification workflow",
+        "Smart batching and caching"
+      ],
+      "test_queries_used": ["New York City, next 2 weeks, protests/cultural/political/parades/art"],
+      "benchmark_file": "results/v0.4.0/run_metadata_20250820_141744.json"
+    }
+  ],
+  "current_version": "0.4.0",
+  "last_updated": "2025-08-21T04:39:00",
+  "metrics_definitions": {
+    "avg_events_found": "Average number of unique events discovered per query",
+    "info_completeness": "Percentage of events with date, time, and location",
+    "avg_cost": "Average API cost per query in USD",
+    "dedup_rate": "Percentage of duplicate events removed",
+    "pipeline_efficiency": "Ratio of final events to initial candidates"
+  }
+}

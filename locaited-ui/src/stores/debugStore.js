@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
 const useDebugStore = create((set, get) => ({
-  // Debug visibility and mode
-  isDebugVisible: localStorage.getItem('debugVisible') === 'true',
+  // Debug visibility and mode  
+  isDebugVisible: false, // Always start hidden
   isDebugMode: false,
   
   // Session state
@@ -11,6 +11,10 @@ const useDebugStore = create((set, get) => ({
   agentResults: {},
   isProcessing: false,
   isWaiting: false,
+  
+  // Debug flow state
+  isAskingCachePreference: false,
+  pendingFormData: null,
   
   // EventSource for SSE
   eventSource: null,
@@ -22,7 +26,11 @@ const useDebugStore = create((set, get) => ({
   toggleDebugVisibility: () => {
     set((state) => {
       const newVisible = !state.isDebugVisible;
-      localStorage.setItem('debugVisible', String(newVisible));
+      if (newVisible) {
+        localStorage.setItem('debugVisible', 'true');
+      } else {
+        localStorage.removeItem('debugVisible'); // Remove instead of setting to false
+      }
       return { isDebugVisible: newVisible };
     });
   },
@@ -61,6 +69,22 @@ const useDebugStore = create((set, get) => ({
   
   setError: (error) => {
     set({ error, isProcessing: false, isWaiting: false });
+  },
+  
+  // Cache preference methods
+  startCachePrompt: (formData) => {
+    set({
+      isAskingCachePreference: true,
+      pendingFormData: formData,
+      error: null
+    });
+  },
+  
+  cancelCachePrompt: () => {
+    set({
+      isAskingCachePreference: false,
+      pendingFormData: null
+    });
   },
   
   setEventSource: (eventSource) => {

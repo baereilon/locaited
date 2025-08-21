@@ -18,7 +18,7 @@ LocAIted's performance is measured by three critical metrics:
 2. **Number of Events with Basic Info**: How many events include ALL essential details:
    - Clear event title
    - Specific date
-   - Start time
+   - Time (when available)
    - Precise location (enough to plan commute)
 3. **Number of Duplicate Events**: How effectively the system deduplicates similar events
 
@@ -179,10 +179,9 @@ locaited/
 │       ├── llm_client.py      # OpenAI wrapper
 │       └── tavily_client.py   # Tavily wrapper
 ├── cache/                      # Cached search results
-├── test data/                  # Benchmark test data
+├── test_data/                  # Benchmark test data
 ├── environment.yml             # Micromamba environment
-├── requirements.txt            # Python dependencies
-└── CLAUDE.md                   # Development context
+└── requirements.txt            # Python dependencies
 ```
 
 ### Running Tests
@@ -229,53 +228,65 @@ Main entry point for event discovery.
   - `workflow_metrics` (dict): Cost and performance metrics
   - `feedback` (str): Explanation if retry needed
 
-## Troubleshooting
+## Benchmark Infrastructure
 
-### Common Issues
+### Performance Evolution
 
-1. **JSON Parsing Errors**: Usually means response too large
-   - Solution: Publisher now limits to 15 events max
+LocAIted includes a comprehensive benchmarking system to track improvements across versions:
 
-2. **High API Costs**: Too many uncached searches
-   - Solution: Enable caching, reuse test queries
+| Version | Avg Results/Query | Events with Info | Total Cost | Key Improvements |
+|---------|------------------|------------------|------------|------------------|
+| v0.1.0  | 14.0             | 14%              | $0.05      | Initial Tavily-only system |
+| v0.2.0  | 21.4             | 8%               | $0.05      | Improved search coverage |
+| v0.3.0  | 15.0             | 11%              | $0.38      | Added LLM orchestration |
+| v0.4.0  | 10.0             | 100%*            | $0.03      | Multi-agent LangGraph pipeline |
 
-3. **Wrong Date Events**: Events outside requested timeframe
-   - Solution: Researcher prompts now enforce date constraints
+*v0.4.0 focuses on quality over quantity - returns fewer but higher-quality events with complete information
 
-4. **Micromamba Activation Issues**: Shell not initialized
-   - Solution: Use `micromamba run -n locaited` prefix for all commands
+### Running Benchmarks
 
-### Debug Mode
+```bash
+# Run standard benchmark suite
+micromamba run -n locaited python benchmarks/benchmark_system.py
 
-```python
-import logging
-logging.basicConfig(level=logging.INFO)  # See detailed logs
+# Test against Liri's validated event dataset
+micromamba run -n locaited python benchmark_simple.py
 ```
+
+### Benchmark Tracking System
+
+LocAIted includes a comprehensive benchmark tracking system in `benchmarks/summary/`:
+
+```bash
+# Update benchmark history after running tests
+python benchmarks/scripts/update_summary.py 0.5.0 results/v0.5.0/benchmark.json
+
+# Compare any two versions
+python benchmarks/scripts/compare_versions.py 0.3.0 0.4.0
+
+# Generate release notes from benchmark data
+python benchmarks/scripts/generate_changelog.py 0.4.0
+```
+
+**Key Files:**
+- `benchmarks/summary/BENCHMARK_HISTORY.json` - Single source of truth for all versions
+- `benchmarks/summary/README.md` - Detailed documentation of the tracking system
+- `benchmarks/scripts/` - Automation tools for analysis and reporting
+
+### Key Metrics Tracked
+
+- **Precision**: How many discovered events are genuinely interesting
+- **Information Completeness**: Events with date, time, and location
+- **Deduplication Rate**: Effectiveness at removing duplicate events
+- **Cost Efficiency**: API cost per successful event discovery
+- **Pipeline Flow**: Event retention through each agent stage
 
 ## Future Development
 
 See [Future Development Index](docs/future/INDEX.md) for planned features and enhancements.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Make changes following existing patterns
-4. Test thoroughly (`micromamba run -n locaited python test_workflow_v4.py`)
-5. Commit with clear messages
-6. Push and create a Pull Request
-7. For new features, consider adding a PRD in `docs/future/`
-
-## License
-
-MIT License - See LICENSE file for details
 
 ## Acknowledgments
 
 - Built for photojournalists covering New York City
 - Powered by OpenAI GPT-4.1-mini and Tavily Search API
 - Orchestrated with LangGraph for robust agent coordination
-
-## Contact
-
-For questions, issues, or suggestions, please open an issue on GitHub.
