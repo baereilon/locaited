@@ -11,7 +11,9 @@ import {
 import EventDiscoveryForm from './components/EventDiscoveryForm';
 import StatusIndicator from './components/StatusIndicator';
 import ResultsContainer from './components/ResultsContainer';
+import DebugModal from './components/DebugModal';
 import { discoverEvents, checkHealth } from './services/api';
+import useDebugSSE from './hooks/useDebugSSE';
 
 // Create theme matching logo's blue gradient
 const theme = createTheme({
@@ -157,8 +159,12 @@ function App() {
   const [error, setError] = useState(null);
   const [apiHealthy, setApiHealthy] = useState(true);
   const [cycleCount, setCycleCount] = useState(0);
+  const [isDebugModalOpen, setIsDebugModalOpen] = useState(false);
   const statusRef = React.useRef(null);
   const abortControllerRef = React.useRef(null);
+  
+  // Debug functionality
+  const { startDebugRun } = useDebugSSE();
 
   // Check API health on mount
   useEffect(() => {
@@ -225,6 +231,15 @@ function App() {
     } finally {
       abortControllerRef.current = null;
     }
+  };
+
+  const handleDebugSubmit = async (formData) => {
+    setIsDebugModalOpen(true);
+    await startDebugRun(formData);
+  };
+
+  const handleDebugModalClose = () => {
+    setIsDebugModalOpen(false);
   };
 
   const handleCancel = () => {
@@ -297,7 +312,8 @@ function App() {
 
           {/* Form Section */}
           <EventDiscoveryForm 
-            onSubmit={handleSubmit} 
+            onSubmit={handleSubmit}
+            onDebugSubmit={handleDebugSubmit}
             isLoading={isLoading}
           />
 
@@ -319,6 +335,12 @@ function App() {
           />
         </Container>
       </Box>
+
+      {/* Debug Modal */}
+      <DebugModal 
+        isOpen={isDebugModalOpen}
+        onClose={handleDebugModalClose}
+      />
     </ThemeProvider>
   );
 }

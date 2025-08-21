@@ -2,10 +2,13 @@
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 import sys
+import json
+import asyncio
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -16,6 +19,13 @@ from agents.fact_checker import FactCheckerAgent
 from agents.publisher import PublisherAgent
 from cache_manager import CacheManager
 from database import SessionLocal, Event, User, Recommendation
+from utils.debug_formatters import (
+    format_editor_output,
+    format_researcher_output,
+    format_fact_checker_output,
+    format_publisher_output,
+    format_error_output
+)
 
 app = FastAPI(title="LocAIted API", version="1.0.0")
 
@@ -36,6 +46,16 @@ class SearchRequest(BaseModel):
     query: str
     location: str = "NYC"
     days_ahead: int = 14
+    use_cache: bool = True
+
+class ExtendedSearchRequest(BaseModel):
+    """Extended request for single-flow UI with profile + query."""
+    query: str
+    location: str = "NYC"
+    custom_location: Optional[str] = None
+    interest_areas: List[str] = []
+    csv_file: Optional[str] = None  # Base64 encoded CSV
+    days_ahead: int = 7  # 7, 14, or 30
     use_cache: bool = True
 
 class ProfileRequest(BaseModel):
@@ -307,6 +327,63 @@ async def run_workflow(request: SearchRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/workflow/discover", response_model=WorkflowResponse)
+async def discover_events(request: ExtendedSearchRequest):
+    """Single-flow endpoint for UI: accepts profile + query, runs v0.4.0 workflow."""
+    try:
+        # Import workflow
+        from agents.workflow import Workflow
+        
+        # Use custom location if provided
+        location = request.custom_location if request.custom_location else request.location
+        
+        # Parse CSV if provided (optional for MVP)
+        previous_events = []
+        if request.csv_file:
+            # Basic CSV parsing would go here
+            # For MVP, we'll skip complex parsing
+            pass
+        
+        # Build user input for workflow v0.4.0
+        user_input = {
+            "location": location,
+            "time_frame": f"next {request.days_ahead} days",
+            "interests": request.interest_areas,
+            "query": request.query
+        }
+        
+        # Initialize and run workflow
+        workflow = Workflow(use_cache=request.use_cache)
+        result = workflow.run_workflow(user_input)
+        
+        # Format events for response
+        events = []
+        for event in result.get("events", []):
+            events.append(EventResponse(
+                title=event.get("title", "Unknown"),
+                location=event.get("location", location),
+                time=event.get("time"),
+                url=event.get("url", ""),
+                access_req=event.get("access_req", "unknown"),
+                summary=event.get("description", ""),
+                score=event.get("score", 0),
+                rationale=event.get("rationale", "")
+            ))
+        
+        # Get metrics from workflow
+        metrics = result.get("workflow_metrics", {})
+        
+        return WorkflowResponse(
+            events=events,
+            total_cost=metrics.get("total_cost", 0),
+            cache_hits=metrics.get("cache_hits", 0),
+            status=result.get("gate_decision", "success"),
+            message=result.get("feedback", f"Found {len(events)} events")
+        )
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/events/recent", response_model=List[EventResponse])
 async def get_recent_events(limit: int = 10):
     """Get recently processed events from database."""
@@ -334,6 +411,211 @@ async def get_recent_events(limit: int = 10):
             
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# Global state for debug sessions
+debug_sessions = {}
+
+
+@app.post("/workflow/discover-debug")
+async def discover_events_debug(request: ExtendedSearchRequest):
+    """Debug endpoint for step-by-step workflow execution with SSE streaming."""
+    
+    # Create unique session ID
+    session_id = f"debug_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}"
+    
+    # Initialize session state
+    debug_sessions[session_id] = {
+        "status": "starting",
+        "current_agent": None,
+        "continue_event": asyncio.Event(),
+        "stop_requested": False
+    }
+    
+    async def event_stream():
+        try:
+            # Import workflow
+            from agents.workflow import Workflow
+            
+            # Use custom location if provided
+            location = request.custom_location if request.custom_location else request.location
+            
+            # Build user input for workflow
+            user_input = {
+                "location": location,
+                "time_frame": f"next {request.days_ahead} days",
+                "interests": request.interest_areas,
+                "query": request.query
+            }
+            
+            # Send initial event
+            yield f"data: {json.dumps({'event': 'session_start', 'session_id': session_id, 'user_input': user_input})}\n\n"
+            
+            # Initialize workflow components
+            editor = EditorAgent()
+            researcher = ResearcherAgent()
+            fact_checker = FactCheckerAgent()
+            publisher = PublisherAgent()
+            
+            # Initialize state
+            state = {"user_input": f"{user_input['query']} in {user_input['location']} for {user_input['time_frame']}"}
+            
+            # Editor Agent
+            debug_sessions[session_id]["current_agent"] = "editor"
+            yield f"data: {json.dumps({'event': 'agent_start', 'agent': 'editor'})}\n\n"
+            
+            try:
+                start_time = datetime.now()
+                state = editor.process(state)
+                end_time = datetime.now()
+                
+                # Add timing metrics
+                state["editor_metrics"] = state.get("editor_metrics", {})
+                state["editor_metrics"]["elapsed_time"] = (end_time - start_time).total_seconds()
+                
+                # Format and send editor results
+                formatted_output = format_editor_output(state)
+                yield f"data: {json.dumps({'event': 'agent_complete', 'agent': 'editor', 'data': formatted_output})}\n\n"
+                
+                # Wait for continue signal
+                yield f"data: {json.dumps({'event': 'waiting_continue', 'agent': 'editor'})}\n\n"
+                await debug_sessions[session_id]["continue_event"].wait()
+                debug_sessions[session_id]["continue_event"].clear()
+                
+                if debug_sessions[session_id]["stop_requested"]:
+                    yield f"data: {json.dumps({'event': 'debug_stopped', 'agent': 'editor'})}\n\n"
+                    return
+                    
+            except Exception as e:
+                error_output = format_error_output("editor", e)
+                yield f"data: {json.dumps({'event': 'agent_error', 'agent': 'editor', 'data': error_output})}\n\n"
+                return
+            
+            # Researcher Agent
+            debug_sessions[session_id]["current_agent"] = "researcher"
+            yield f"data: {json.dumps({'event': 'agent_start', 'agent': 'researcher'})}\n\n"
+            
+            try:
+                start_time = datetime.now()
+                state = researcher.process(state)
+                end_time = datetime.now()
+                
+                # Add timing metrics
+                state["researcher_metrics"] = state.get("researcher_metrics", {})
+                state["researcher_metrics"]["elapsed_time"] = (end_time - start_time).total_seconds()
+                
+                # Format and send researcher results
+                formatted_output = format_researcher_output(state)
+                yield f"data: {json.dumps({'event': 'agent_complete', 'agent': 'researcher', 'data': formatted_output})}\n\n"
+                
+                # Wait for continue signal
+                yield f"data: {json.dumps({'event': 'waiting_continue', 'agent': 'researcher'})}\n\n"
+                await debug_sessions[session_id]["continue_event"].wait()
+                debug_sessions[session_id]["continue_event"].clear()
+                
+                if debug_sessions[session_id]["stop_requested"]:
+                    yield f"data: {json.dumps({'event': 'debug_stopped', 'agent': 'researcher'})}\n\n"
+                    return
+                    
+            except Exception as e:
+                error_output = format_error_output("researcher", e)
+                yield f"data: {json.dumps({'event': 'agent_error', 'agent': 'researcher', 'data': error_output})}\n\n"
+                return
+            
+            # Fact-Checker Agent
+            debug_sessions[session_id]["current_agent"] = "fact_checker"
+            yield f"data: {json.dumps({'event': 'agent_start', 'agent': 'fact_checker'})}\n\n"
+            
+            try:
+                start_time = datetime.now()
+                state = fact_checker.process(state)
+                end_time = datetime.now()
+                
+                # Add timing metrics
+                state["fact_checker_metrics"] = state.get("fact_checker_metrics", {})
+                state["fact_checker_metrics"]["elapsed_time"] = (end_time - start_time).total_seconds()
+                
+                # Format and send fact-checker results
+                formatted_output = format_fact_checker_output(state)
+                yield f"data: {json.dumps({'event': 'agent_complete', 'agent': 'fact_checker', 'data': formatted_output})}\n\n"
+                
+                # Wait for continue signal
+                yield f"data: {json.dumps({'event': 'waiting_continue', 'agent': 'fact_checker'})}\n\n"
+                await debug_sessions[session_id]["continue_event"].wait()
+                debug_sessions[session_id]["continue_event"].clear()
+                
+                if debug_sessions[session_id]["stop_requested"]:
+                    yield f"data: {json.dumps({'event': 'debug_stopped', 'agent': 'fact_checker'})}\n\n"
+                    return
+                    
+            except Exception as e:
+                error_output = format_error_output("fact_checker", e)
+                yield f"data: {json.dumps({'event': 'agent_error', 'agent': 'fact_checker', 'data': error_output})}\n\n"
+                return
+            
+            # Publisher Agent
+            debug_sessions[session_id]["current_agent"] = "publisher"
+            yield f"data: {json.dumps({'event': 'agent_start', 'agent': 'publisher'})}\n\n"
+            
+            try:
+                start_time = datetime.now()
+                state = publisher.process(state)
+                end_time = datetime.now()
+                
+                # Add timing metrics
+                state["publisher_metrics"] = state.get("publisher_metrics", {})
+                state["publisher_metrics"]["elapsed_time"] = (end_time - start_time).total_seconds()
+                
+                # Format and send publisher results
+                formatted_output = format_publisher_output(state)
+                yield f"data: {json.dumps({'event': 'agent_complete', 'agent': 'publisher', 'data': formatted_output})}\n\n"
+                
+                # Final completion
+                yield f"data: {json.dumps({'event': 'workflow_complete', 'final_state': state})}\n\n"
+                
+            except Exception as e:
+                error_output = format_error_output("publisher", e)
+                yield f"data: {json.dumps({'event': 'agent_error', 'agent': 'publisher', 'data': error_output})}\n\n"
+                return
+            
+        except Exception as e:
+            yield f"data: {json.dumps({'event': 'workflow_error', 'error': str(e)})}\n\n"
+        finally:
+            # Clean up session
+            if session_id in debug_sessions:
+                del debug_sessions[session_id]
+    
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/plain",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"  # Disable nginx buffering
+        }
+    )
+
+
+@app.post("/workflow/debug-continue/{session_id}")
+async def debug_continue(session_id: str):
+    """Signal debug session to continue to next agent."""
+    if session_id not in debug_sessions:
+        raise HTTPException(status_code=404, detail="Debug session not found")
+    
+    debug_sessions[session_id]["continue_event"].set()
+    return {"status": "continue_signal_sent"}
+
+
+@app.post("/workflow/debug-stop/{session_id}")
+async def debug_stop(session_id: str):
+    """Signal debug session to stop."""
+    if session_id not in debug_sessions:
+        raise HTTPException(status_code=404, detail="Debug session not found")
+    
+    debug_sessions[session_id]["stop_requested"] = True
+    debug_sessions[session_id]["continue_event"].set()  # Unblock if waiting
+    return {"status": "stop_signal_sent"}
+
 
 if __name__ == "__main__":
     import uvicorn
