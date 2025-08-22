@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional, List
 import pickle
 
-from config import PROJECT_ROOT
+from locaited.config import PROJECT_ROOT
 
 class CacheManager:
     """Manages caching for API calls to save credits."""

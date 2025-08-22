@@ -144,3 +144,4 @@ See `docs/USER-FLOW-V1.md` for complete specification.
 - Report back means I want you to share with what you plan on doing so I can approve it before you actually do it. eg Report back with a documenation of X means send me the proposed documentation to review before creating the actual file
 - Do not run to implement tasks/fixes without me telling you to do so
 - Do not add Claude signature to Git commits
+- Anytime I tell you to "Create a PRD" I expect a dialogue where you propose something, I give feedback and we iterate over that until I approve the PRD. Same goes for generating Sub-Tasks.

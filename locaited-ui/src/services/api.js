@@ -48,7 +48,8 @@ apiClient.interceptors.response.use(
  */
 export const discoverEvents = async (requestData, signal = null) => {
   try {
-    const response = await apiClient.post('/workflow/discover', requestData, {
+    // TEMPORARY: Use test endpoint for development/debugging
+    const response = await apiClient.post('/workflow/discover-test', requestData, {
       signal: signal,
       timeout: 300000, // 5 minute timeout
     });

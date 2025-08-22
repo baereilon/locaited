@@ -396,6 +396,51 @@ async def discover_events(request: ExtendedSearchRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/workflow/discover-test", response_model=WorkflowResponse)
+async def discover_events_test(request: ExtendedSearchRequest):
+    """Test endpoint that returns mock data quickly for UI testing."""
+    # Return mock data immediately to test UI
+    mock_events = [
+        EventResponse(
+            title="Fashion Week Opening Gala",
+            location="Bryant Park, NYC",
+            time="2025-08-25 18:00",
+            url="https://example.com/fashion-week",
+            access_req="public_only",
+            summary="Annual fashion week opening ceremony featuring emerging designers",
+            score=95,
+            rationale="Highly relevant fashion event in NYC"
+        ),
+        EventResponse(
+            title="Tech & Fashion Symposium",
+            location="Museum of Modern Art, NYC",
+            time="2025-08-26 14:00",
+            url="https://example.com/tech-fashion",
+            access_req="public_only",
+            summary="Exploring the intersection of technology and fashion design",
+            score=88,
+            rationale="Combines both fashion and technology interests"
+        ),
+        EventResponse(
+            title="Sustainable Fashion Showcase",
+            location="Chelsea Market, NYC",
+            time="2025-08-27 10:00",
+            url="https://example.com/sustainable",
+            access_req="public_only",
+            summary="Exhibition of eco-friendly fashion brands and innovations",
+            score=82,
+            rationale="Important fashion industry trend"
+        )
+    ]
+    
+    return WorkflowResponse(
+        events=mock_events,
+        total_cost=0.05,
+        cache_hits=3,
+        status="success",
+        message=f"Test data: Found {len(mock_events)} mock events"
+    )
+
 @app.get("/events/recent", response_model=List[EventResponse])
 async def get_recent_events(limit: int = 10):
     """Get recently processed events from database."""

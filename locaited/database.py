@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime, B
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship, Session
 from sqlalchemy.sql import func
 
-from config import DATABASE_URL
+from locaited.config import DATABASE_URL
 
 Base = declarative_base()
 
