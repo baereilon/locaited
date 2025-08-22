@@ -62,7 +62,7 @@ describe('Results Display Integration', () => {
     );
     
     // Fill in the form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'fashion events' } });
     
     // Submit the form
@@ -96,7 +96,7 @@ describe('Results Display Integration', () => {
     );
     
     // Fill and submit form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'test query' } });
     
     const submitButton = screen.getByRole('button', { name: /Discover Events/i });
@@ -122,7 +122,7 @@ describe('Results Display Integration', () => {
     );
     
     // Fill and submit form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'test query' } });
     
     const submitButton = screen.getByRole('button', { name: /Discover Events/i });
@@ -149,7 +149,7 @@ describe('Results Display Integration', () => {
     );
     
     // Submit form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'test query' } });
     
     const submitButton = screen.getByRole('button', { name: /Discover Events/i });
@@ -186,7 +186,7 @@ describe('Results Display Integration', () => {
     );
     
     // Submit form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'obscure query' } });
     
     const submitButton = screen.getByRole('button', { name: /Discover Events/i });
@@ -216,7 +216,7 @@ describe('Results Display Integration', () => {
     );
     
     // Submit form
-    const queryInput = screen.getByLabelText(/What are you looking for/i);
+    const queryInput = screen.getByLabelText(/What events are you looking for/i);
     fireEvent.change(queryInput, { target: { value: 'test query' } });
     
     const submitButton = screen.getByRole('button', { name: /Discover Events/i });

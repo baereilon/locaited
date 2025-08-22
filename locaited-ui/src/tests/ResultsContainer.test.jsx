@@ -94,15 +94,19 @@ describe('ResultsContainer', () => {
   it('allows sorting by date and score', () => {
     render(<ResultsContainer events={mockEvents} metrics={mockMetrics} error={null} />);
     
-    // Find sort dropdown
-    const sortSelect = screen.getByLabelText('Sort by');
+    // Find sort dropdown by text since MUI Select doesn't have standard label association
+    const sortButton = screen.getByText('Date');  // Default sort value
+    expect(sortButton).toBeInTheDocument();
     
-    // Initially sorted by date
-    expect(sortSelect.value).toBe('date');
+    // Click to open dropdown
+    fireEvent.mouseDown(sortButton);
     
-    // Change to sort by score
-    fireEvent.change(sortSelect, { target: { value: 'score' } });
-    expect(sortSelect.value).toBe('score');
+    // Select score option
+    const scoreOption = screen.getByText('Score');
+    fireEvent.click(scoreOption);
+    
+    // Verify it changed
+    expect(screen.getByText('Score')).toBeInTheDocument();
   });
 
   it('renders metrics panel with correct data', () => {
