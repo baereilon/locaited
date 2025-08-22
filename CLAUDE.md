@@ -145,3 +145,4 @@ See `docs/USER-FLOW-V1.md` for complete specification.
 - Do not run to implement tasks/fixes without me telling you to do so
 - Do not add Claude signature to Git commits
 - Anytime I tell you to "Create a PRD" I expect a dialogue where you propose something, I give feedback and we iterate over that until I approve the PRD. Same goes for generating Sub-Tasks.
+- When discussing PRDs - refrain from sharing code until the feature is properly defined. Code should come after the problem and suggested solution are written out to the point that the implementation within the current system is clear
