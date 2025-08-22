@@ -63,9 +63,9 @@ export const discoverEvents = async (requestData, signal = null) => {
     }
     // Re-throw with additional context
     throw {
-      message: error.message,
-      status: error.status,
-      isNetworkError: !error.status,
+      message: error.response?.data?.detail || error.message,
+      status: error.response?.status,
+      isNetworkError: !error.response,
     };
   }
 };

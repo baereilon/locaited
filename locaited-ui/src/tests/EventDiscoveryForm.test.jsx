@@ -13,10 +13,10 @@ describe('EventDiscoveryForm', () => {
   it('renders all required fields', () => {
     render(<EventDiscoveryForm onSubmit={mockSubmit} />);
     
-    // Check for form elements - MUI Select doesn't have standard label association
-    expect(screen.getByText(/Location/i)).toBeInTheDocument();
+    // Check for form elements
+    expect(screen.getByText('New York City')).toBeInTheDocument(); // Location select shows default value
     expect(screen.getByText(/interest areas/i)).toBeInTheDocument();
-    expect(screen.getByText(/Time Window/i)).toBeInTheDocument();
+    expect(screen.getByText('Next 7 days')).toBeInTheDocument(); // Time window shows default
     expect(screen.getByLabelText(/what events are you looking for/i)).toBeInTheDocument();
   });
 
