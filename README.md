@@ -105,10 +105,10 @@ export $(cat .env.secret | xargs)
 ### Basic Usage
 
 ```python
-from src.agents.workflow_v4 import WorkflowV4
+from locaited.agents.workflow import Workflow
 
 # Initialize workflow
-workflow = WorkflowV4()
+workflow = Workflow()
 
 # Run event discovery
 result = workflow.run_workflow({
@@ -126,14 +126,14 @@ for event in events:
 ### Command Line Testing
 
 ```bash
-# Test single workflow run
-micromamba run -n locaited python test_single.py
+# Run validation workflow
+micromamba run -n locaited python scripts/validation/validate_workflow.py
 
-# Run benchmark against test data
-micromamba run -n locaited python benchmark_simple.py
+# Run benchmark tests
+micromamba run -n locaited python scripts/benchmark/benchmark_workflow.py
 
-# Test specific components
-micromamba run -n locaited python test_workflow_v4.py
+# Test the workflow
+micromamba run -n locaited python scripts/validation/test_workflow.py
 ```
 
 ## Configuration
@@ -167,36 +167,70 @@ The system includes:
 
 ```
 locaited/
-├── src/
-│   ├── agents/
+├── locaited/                   # Main package directory
+│   ├── agents/                 # Agent implementations
 │   │   ├── base_agent.py      # Base classes with caching
-│   │   ├── editor_v4.py       # Profile builder
-│   │   ├── researcher_v4.py   # Lead generator
-│   │   ├── fact_checker_v4.py # Evidence gatherer
-│   │   ├── publisher_v4.py    # Event extractor
-│   │   └── workflow_v4.py     # LangGraph orchestration
-│   └── utils/
-│       ├── llm_client.py      # OpenAI wrapper
-│       └── tavily_client.py   # Tavily wrapper
-├── cache/                      # Cached search results
-├── test_data/                  # Benchmark test data
-├── environment.yml             # Micromamba environment
-└── requirements.txt            # Python dependencies
+│   │   ├── editor.py          # Profile builder agent
+│   │   ├── researcher.py      # Lead generator agent
+│   │   ├── fact_checker.py    # Evidence gatherer agent
+│   │   ├── publisher.py       # Event extractor agent
+│   │   └── workflow.py        # LangGraph orchestration
+│   ├── utils/                  # Utility modules
+│   │   ├── llm_client.py      # OpenAI API wrapper
+│   │   ├── tavily_client.py   # Tavily API wrapper
+│   │   └── debug_formatters.py # Debug output formatting
+│   ├── api.py                 # FastAPI application
+│   ├── config.py              # Configuration management
+│   ├── cache_manager.py       # Cache handling
+│   └── database.py            # Database operations
+├── locaited-ui/                # React frontend application
+│   ├── src/                    # React source files
+│   ├── public/                 # Static assets
+│   └── package.json           # Frontend dependencies
+├── scripts/                    # CLI tools and utilities
+│   ├── validation/
+│   │   ├── validate_workflow.py  # Main validation script
+│   │   └── test_workflow.py     # Workflow testing
+│   ├── benchmark/
+│   │   └── benchmark_workflow.py # Benchmark runner
+│   └── setup/
+│       └── setup_validate.py    # Setup verification
+├── benchmarks/                 # Benchmarking system
+│   ├── summary/               # Historical benchmark data
+│   ├── results/               # Version-specific results
+│   └── scripts/               # Analysis tools
+├── tests/                     # Test suite
+│   ├── unit/                  # Unit tests
+│   ├── integration/           # Integration tests
+│   └── conftest.py           # Pytest configuration
+├── docs/                      # Documentation
+│   ├── USER-FLOW-V1.md       # User flow specification
+│   ├── PRD-*.md              # Product requirement docs
+│   └── future/               # Future development plans
+├── cache/                     # API response cache (gitignored)
+├── test_data/                 # Test datasets
+├── environment.yml            # Micromamba environment
+├── requirements.txt           # Python dependencies
+├── setup.py                   # Package installation
+└── pytest.ini                 # Test configuration
 ```
 
 ### Running Tests
 
 ```bash
-# Run all tests
-micromamba run -n locaited python test_workflow_v4.py
+# Run all pytest tests
+micromamba run -n locaited pytest
+
+# Run validation workflow
+micromamba run -n locaited python scripts/validation/validate_workflow.py
 
 # Run benchmark
-micromamba run -n locaited python benchmark_simple.py
+micromamba run -n locaited python scripts/benchmark/benchmark_workflow.py
 
 # Test individual agents
 micromamba run -n locaited python -c "
-from src.agents.researcher_v4 import ResearcherV4
-researcher = ResearcherV4()
+from locaited.agents.researcher import ResearcherAgent
+researcher = ResearcherAgent()
 # Test researcher...
 "
 ```
@@ -211,7 +245,7 @@ researcher = ResearcherV4()
 
 ## API Documentation
 
-### WorkflowV4.run_workflow()
+### Workflow.run_workflow()
 
 Main entry point for event discovery.
 
@@ -249,8 +283,11 @@ LocAIted includes a comprehensive benchmarking system to track improvements acro
 # Run standard benchmark suite
 micromamba run -n locaited python benchmarks/benchmark_system.py
 
-# Test against Liri's validated event dataset
-micromamba run -n locaited python benchmark_simple.py
+# Run workflow benchmark
+micromamba run -n locaited python scripts/benchmark/benchmark_workflow.py
+
+# Validate workflow with test queries
+micromamba run -n locaited python scripts/validation/validate_workflow.py
 ```
 
 ### Benchmark Tracking System

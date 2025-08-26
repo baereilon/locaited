@@ -77,6 +77,7 @@ coverage.xml
 cache/
 extraction_results/
 recommendation_results/
+documents/
 user_flow_analysis_*/
 benchmark_simple_results.json
 benchmark_v4_proper.py
